@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaires de Demande | SOFRETMA TRANSIT Abidjan</title>
+  <meta name="description" content="Formulaires de demande de devis SOFRETMA TRANSIT : maritime, aérien, ferroviaire, terrestre, bureau d'achats, voyages, prestations et marketing digital.">
+  <meta property="og:title" content="Formulaires de Demande | SOFRETMA TRANSIT">
+  <meta property="og:image" content="images/og-image-sofretma.jpg">
+  <meta property="og:url" content="https://sofretmatransit.com/formulaires.html">
+  <link rel="canonical" href="https://sofretmatransit.com/formulaires.html">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auto-scroll.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body data-next-page="localisation.html">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <picture>
+            <source srcset="images/logo-sofretma.webp" type="image/webp">
+            <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
+          </picture>
+        </a>
+        <nav class="header__nav" aria-label="Navigation principale">
+          <ul class="nav__liste">
+            <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <a href="#" class="nav__lien">Services</a>
+              <ul class="dropdown">
+                <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
+                <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
+                <li><a href="ferroviaire.html" class="dropdown__lien">Transport ferroviaire</a></li>
+                <li><a href="terrestre.html" class="dropdown__lien">Transport terrestre</a></li>
+                <li><a href="bureau-achats.html" class="dropdown__lien">Bureau d'achats</a></li>
+                <li><a href="voyages.html" class="dropdown__lien">Agent de voyages</a></li>
+                <li><a href="prestations.html" class="dropdown__lien">Prestations de services</a></li>
+                <li><a href="marketing-digital.html" class="dropdown__lien">Marketing digital</a></li>
+                <li><a href="assurances.html" class="dropdown__lien">Assurances</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
+            <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero--interne" style="min-height:30vh;background:linear-gradient(135deg,var(--vert-fonce),var(--vert-logo));">
+    <div class="hero__overlay" style="background:none;"></div>
+    <div class="container">
+      <div class="hero__contenu">
+        <nav class="breadcrumb"><a href="index.html">Accueil</a> › <span>Formulaires de demande</span></nav>
+        <span class="hero__badge">📋 Devis rapide et gratuit</span>
+        <h1 class="hero__titre">Formulaires de demande</h1>
+        <p class="hero__texte">Sélectionnez votre type de service et envoyez votre demande directement via WhatsApp ou par email.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONGLETS FORMULAIRES -->
+  <section class="section">
+    <div class="container">
+
+      <div class="onglets">
+        <ul class="onglets__liste" role="tablist">
+          <li><button class="onglet__btn" data-onglet="form-maritime" role="tab">⚓ Maritime</button></li>
+          <li><button class="onglet__btn" data-onglet="form-aerien" role="tab">✈️ Aérien</button></li>
+          <li><button class="onglet__btn" data-onglet="form-ferroviaire" role="tab">🚂 Ferroviaire</button></li>
+          <li><button class="onglet__btn" data-onglet="form-terrestre" role="tab">🚛 Terrestre</button></li>
+          <li><button class="onglet__btn" data-onglet="form-achats" role="tab">🛒 Bureau d'achats</button></li>
+          <li><button class="onglet__btn" data-onglet="form-voyages" role="tab">🌐 Voyages</button></li>
+          <li><button class="onglet__btn" data-onglet="form-prestations" role="tab">📋 Prestations</button></li>
+          <li><button class="onglet__btn" data-onglet="form-marketing" role="tab">💻 Marketing digital</button></li>
+        </ul>
+
+        <!-- ---- Transport Maritime ---- -->
+        <div id="form-maritime" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport maritime</h2>
+          <form class="formulaire" data-categorie="Transport maritime">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-nom">Nom complet *</label>
+                <input type="text" id="mar-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-email">Email *</label>
+                <input type="email" id="mar-email" name="email" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="mar-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-type">Type de chargement *</label>
+                <select id="mar-type" name="type_chargement" class="formulaire__champ" required>
+                  <option value="">Sélectionner…</option>
+                  <option value="FCL">FCL — Conteneur complet</option>
+                  <option value="LCL">LCL — Groupage</option>
+                  <option value="Vrac">Vrac</option>
+                  <option value="Température contrôlée">Température contrôlée</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-origine">Pays d'origine *</label>
+                <input type="text" id="mar-origine" name="pays_origine" class="formulaire__champ" placeholder="Ex : Chine, France…" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-destination">Pays de destination *</label>
+                <input type="text" id="mar-destination" name="pays_destination" class="formulaire__champ" placeholder="Ex : Abidjan, Sénégal…" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-volume">Volume estimé</label>
+                <input type="text" id="mar-volume" name="volume" class="formulaire__champ" placeholder="Ex : 1 conteneur 20 pieds, 5T…">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mar-marchandise">Type de marchandise</label>
+                <input type="text" id="mar-marchandise" name="marchandise" class="formulaire__champ" placeholder="Ex : textiles, équipements…">
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="mar-desc">Description du besoin</label>
+              <textarea id="mar-desc" name="description" class="formulaire__champ formulaire__champ--textarea" placeholder="Précisez votre demande, contraintes particulières, délais…"></textarea>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Document joint (optionnel)</label>
+              <input type="file" name="fichier" class="formulaire__champ" accept=".pdf,.jpg,.png,.doc,.docx">
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ---- Transport Aérien ---- -->
+        <div id="form-aerien" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport aérien</h2>
+          <form class="formulaire" data-categorie="Transport aérien">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-nom">Nom complet *</label>
+                <input type="text" id="aer-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-email">Email *</label>
+                <input type="email" id="aer-email" name="email" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="aer-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-urgence">Caractère urgent ?</label>
+                <select id="aer-urgence" name="urgence" class="formulaire__champ">
+                  <option value="Oui">Oui — envoi express</option>
+                  <option value="Non">Non — envoi standard</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-origine">Aéroport/Ville d'origine *</label>
+                <input type="text" id="aer-origine" name="origine" class="formulaire__champ" placeholder="Ex : Abidjan (ABJ)" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-dest">Aéroport/Ville de destination *</label>
+                <input type="text" id="aer-dest" name="destination" class="formulaire__champ" placeholder="Ex : Paris (CDG), Dubaï…" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-poids">Poids estimé (kg)</label>
+                <input type="number" id="aer-poids" name="poids_kg" class="formulaire__champ" placeholder="Ex : 50">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="aer-type">Type de marchandise</label>
+                <select id="aer-type" name="type_marchandise" class="formulaire__champ">
+                  <option value="">Sélectionner…</option>
+                  <option value="Colis express">Colis express</option>
+                  <option value="Périssables">Marchandises périssables</option>
+                  <option value="Équipements industriels">Équipements industriels</option>
+                  <option value="Matériel médical">Matériel médical</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="aer-desc">Description du besoin</label>
+              <textarea id="aer-desc" name="description" class="formulaire__champ formulaire__champ--textarea"></textarea>
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ---- Transport Ferroviaire ---- -->
+        <div id="form-ferroviaire" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport ferroviaire</h2>
+          <form class="formulaire" data-categorie="Transport ferroviaire">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="fer-nom">Nom complet *</label>
+                <input type="text" id="fer-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="fer-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="fer-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="fer-email">Email *</label>
+                <input type="email" id="fer-email" name="email" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="fer-gare">Gare de destination</label>
+                <select id="fer-gare" name="gare_destination" class="formulaire__champ">
+                  <option value="Bouaké">Bouaké</option>
+                  <option value="Ouagadougou">Ouagadougou</option>
+                  <option value="Autre">Autre gare intermédiaire</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="fer-type">Type de marchandise</label>
+                <select id="fer-type" name="type" class="formulaire__champ">
+                  <option value="Vrac">Marchandises en vrac</option>
+                  <option value="Conteneur">Conteneur</option>
+                  <option value="Véhicule">Véhicule</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="fer-volume">Volume / Tonnage</label>
+                <input type="text" id="fer-volume" name="volume" class="formulaire__champ" placeholder="Ex : 20T, 1 conteneur…">
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="fer-desc">Description</label>
+              <textarea id="fer-desc" name="description" class="formulaire__champ formulaire__champ--textarea"></textarea>
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ---- Transport Terrestre ---- -->
+        <div id="form-terrestre" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport terrestre</h2>
+          <form class="formulaire" data-categorie="Transport terrestre">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ter-nom">Nom complet *</label>
+                <input type="text" id="ter-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ter-email">Email *</label>
+                <input type="email" id="ter-email" name="email" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ter-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="ter-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ter-pays">Pays de destination *</label>
+                <select id="ter-pays" name="pays_destination" class="formulaire__champ" required>
+                  <option value="">Sélectionner…</option>
+                  <option value="Mali">Mali</option>
+                  <option value="Burkina Faso">Burkina Faso</option>
+                  <option value="Guinée">Guinée</option>
+                  <option value="Sénégal">Sénégal</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Togo">Togo</option>
+                  <option value="Bénin">Bénin</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ter-camion">Type de camion</label>
+                <select id="ter-camion" name="type_camion" class="formulaire__champ">
+                  <option value="8T">Camion 8T</option>
+                  <option value="20T">Camion 20T</option>
+                  <option value="30T">Camion 30T</option>
+                  <option value="Semi-remorque">Semi-remorque</option>
+                  <option value="Non défini">Non défini</option>
+                </select>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ter-marchandise">Type de marchandise</label>
+                <input type="text" id="ter-marchandise" name="marchandise" class="formulaire__champ" placeholder="Ex : conteneur, matériaux…">
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="ter-desc">Description</label>
+              <textarea id="ter-desc" name="description" class="formulaire__champ formulaire__champ--textarea"></textarea>
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ---- Bureau d'achats ---- -->
+        <div id="form-achats" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Bureau d'achats</h2>
+          <form class="formulaire" data-categorie="Bureau d'achats">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ach-nom">Nom complet *</label>
+                <input type="text" id="ach-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ach-email">Email *</label>
+                <input type="email" id="ach-email" name="email" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ach-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="ach-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ach-pays">Pays d'achat *</label>
+                <select id="ach-pays" name="pays_achat" class="formulaire__champ" required>
+                  <option value="">Sélectionner…</option>
+                  <option value="Chine">Chine</option>
+                  <option value="France">France</option>
+                  <option value="Allemagne">Allemagne</option>
+                  <option value="Italie">Italie</option>
+                  <option value="Turquie">Turquie</option>
+                  <option value="Émirats">Émirats Arabes Unis</option>
+                  <option value="États-Unis">États-Unis</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ach-produit">Type de produit *</label>
+                <input type="text" id="ach-produit" name="produit" class="formulaire__champ" placeholder="Ex : textiles, électronique, alimentaire…" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ach-budget">Budget estimé (optionnel)</label>
+                <input type="text" id="ach-budget" name="budget" class="formulaire__champ" placeholder="Ex : 5.000.000 F CFA">
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="ach-desc">Description du besoin</label>
+              <textarea id="ach-desc" name="description" class="formulaire__champ formulaire__champ--textarea" placeholder="Décrivez vos produits, quantités, fournisseurs éventuels…"></textarea>
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ---- Voyages ---- -->
+        <div id="form-voyages" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Agent de voyages</h2>
+          <form class="formulaire" data-categorie="Agent de voyages">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="voy-nom">Nom complet *</label>
+                <input type="text" id="voy-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="voy-email">Email *</label>
+                <input type="email" id="voy-email" name="email" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="voy-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="voy-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="voy-service">Service souhaité</label>
+                <select id="voy-service" name="service" class="formulaire__champ">
+                  <option value="Billet d'avion">Billet d'avion</option>
+                  <option value="Hôtel">Réservation hôtel</option>
+                  <option value="Voyage d'affaires">Voyage d'affaires</option>
+                  <option value="Assistance visa">Assistance visa</option>
+                  <option value="Package complet">Package complet</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="voy-dest">Destination *</label>
+                <input type="text" id="voy-dest" name="destination" class="formulaire__champ" placeholder="Ex : Paris, Dubaï, Montréal…" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="voy-date">Date de voyage souhaitée</label>
+                <input type="date" id="voy-date" name="date_voyage" class="formulaire__champ">
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="voy-nb">Nombre de voyageurs</label>
+                <input type="number" id="voy-nb" name="nb_voyageurs" class="formulaire__champ" value="1" min="1">
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="voy-desc">Précisions</label>
+              <textarea id="voy-desc" name="description" class="formulaire__champ formulaire__champ--textarea" placeholder="Besoins spécifiques, classe, visa requis…"></textarea>
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ---- Prestations ---- -->
+        <div id="form-prestations" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Prestations de services</h2>
+          <form class="formulaire" data-categorie="Prestations de services">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="pre-nom">Nom complet *</label>
+                <input type="text" id="pre-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="pre-email">Email *</label>
+                <input type="email" id="pre-email" name="email" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="pre-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="pre-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="pre-type">Type de prestation *</label>
+                <select id="pre-type" name="type_prestation" class="formulaire__champ" required>
+                  <option value="">Sélectionner…</option>
+                  <option value="Dédouanement portuaire">Dédouanement portuaire</option>
+                  <option value="Dédouanement aéroportuaire">Dédouanement aéroportuaire</option>
+                  <option value="Documentation export-import">Documentation export-import</option>
+                  <option value="Litige douanier">Gestion litige douanier</option>
+                  <option value="Conseil réglementation">Conseil en réglementation</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="pre-desc">Description du besoin *</label>
+              <textarea id="pre-desc" name="description" class="formulaire__champ formulaire__champ--textarea" required placeholder="Décrivez votre situation et vos besoins…"></textarea>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Document joint (optionnel)</label>
+              <input type="file" name="fichier" class="formulaire__champ" accept=".pdf,.jpg,.png">
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ---- Marketing digital ---- -->
+        <div id="form-marketing" class="onglet__contenu" role="tabpanel">
+          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Marketing digital</h2>
+          <form class="formulaire" data-categorie="Marketing digital">
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mkt-nom">Nom complet *</label>
+                <input type="text" id="mkt-nom" name="nom" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mkt-email">Email *</label>
+                <input type="email" id="mkt-email" name="email" class="formulaire__champ" required>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mkt-tel">Téléphone / WhatsApp *</label>
+                <input type="tel" id="mkt-tel" name="telephone" class="formulaire__champ" required>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mkt-type">Type de projet *</label>
+                <select id="mkt-type" name="type_projet" class="formulaire__champ" required>
+                  <option value="">Sélectionner…</option>
+                  <option value="Site vitrine">Site vitrine professionnel</option>
+                  <option value="Site e-commerce">Site e-commerce</option>
+                  <option value="Application métier">Application de métier</option>
+                  <option value="SEO / Référencement">SEO / Référencement</option>
+                  <option value="Stratégie digitale">Stratégie digitale complète</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="mkt-secteur">Secteur d'activité</label>
+              <input type="text" id="mkt-secteur" name="secteur" class="formulaire__champ" placeholder="Ex : transit, immobilier, santé…">
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="mkt-desc">Description du projet *</label>
+              <textarea id="mkt-desc" name="description" class="formulaire__champ formulaire__champ--textarea" required placeholder="Décrivez votre projet, vos objectifs, votre budget approximatif…"></textarea>
+            </div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
+              <button type="button" class="btn btn--or" data-action="whatsapp">💬 Envoyer via WhatsApp</button>
+              <button type="button" class="btn btn--vert" data-action="email">📧 Envoyer par email</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grille">
+        <div>
+          <picture>
+            <source srcset="images/logo-sofretma-blanc.webp" type="image/webp">
+            <img src="images/logo-sofretma-blanc.png" alt="SOFRETMA TRANSIT" class="footer__logo">
+          </picture>
+          <p class="footer__desc">Commissionnaire agréé de transit international basé à Abidjan.</p>
+          <div class="footer__reseaux">
+            <a href="https://web.facebook.com/p/Sofretma-Transit-61567939505584/" target="_blank" rel="noopener" class="footer__reseau">f</a>
+            <a href="https://www.tiktok.com/@sofretma.transit6/" target="_blank" rel="noopener" class="footer__reseau">TK</a>
+            <a href="https://www.linkedin.com/in/ivan-eric-tekele-934831230/" target="_blank" rel="noopener" class="footer__reseau">in</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__titre">Navigation</p>
+          <ul class="footer__liens">
+            <li><a href="index.html" class="footer__lien">Accueil</a></li>
+            <li><a href="a-propos.html" class="footer__lien">À Propos</a></li>
+            <li><a href="temoignages.html" class="footer__lien">Témoignages</a></li>
+            <li><a href="contact.html" class="footer__lien">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__titre">Nos services</p>
+          <ul class="footer__liens">
+            <li><a href="maritime.html" class="footer__lien">Transport maritime</a></li>
+            <li><a href="aerien.html" class="footer__lien">Transport aérien</a></li>
+            <li><a href="terrestre.html" class="footer__lien">Transport terrestre</a></li>
+            <li><a href="bureau-achats.html" class="footer__lien">Bureau d'achats</a></li>
+            <li><a href="voyages.html" class="footer__lien">Agent de voyages</a></li>
+            <li><a href="assurances.html" class="footer__lien">Assurances</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__titre">Contact</p>
+          <div class="footer__contact-item">📍 Cocody Anono, Abidjan</div>
+          <div class="footer__contact-item">📞 <a href="tel:+22501020201 79" class="footer__lien">+225 01 02 02 01 79</a></div>
+          <div class="footer__contact-item">💬 <a href="https://wa.me/2250767639063" target="_blank" rel="noopener" class="footer__lien">+225 07 67 63 90 63</a></div>
+          <div class="footer__contact-item">📧 <a href="mailto:contact@sofretmatransit.com" class="footer__lien">contact@sofretmatransit.com</a></div>
+        </div>
+      </div>
+      <div class="footer__bas">
+        <p>© 2025 SOFRETMA TRANSIT — SARL | RCCM N°CI-ABJ-03-2025-B13-00904</p>
+        <div class="footer__legaux">
+          <a href="mentions-legales.html" class="footer__lien">Mentions légales</a>
+          <a href="confidentialite.html" class="footer__lien">Confidentialité</a>
+          <a href="cgv.html" class="footer__lien">CGV</a>
+        </div>
+        <p>Conçu par <strong>W2K-Digital</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20renseignement."
+     class="whatsapp-flottant" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+    💬 WhatsApp
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/formulaires.js"></script>
+  <script src="js/auto-scroll.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+</body>
+</html>
