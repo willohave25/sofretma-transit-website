@@ -1,0 +1,82 @@
+/* ============================================================
+   W2K Auto-Scroll Premium — Styles
+   SOFRETMA TRANSIT | W2K-Digital
+   ============================================================ */
+
+/* Indicateur de défilement automatique */
+#w2k-indicateur {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #C9922B;
+  z-index: 8500;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+#w2k-indicateur.actif {
+  animation: w2k-pulse 1.5s ease-in-out infinite;
+}
+
+#w2k-indicateur.pause {
+  background: #888;
+  animation: none;
+}
+
+#w2k-indicateur::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #C9922B;
+  animation: w2k-ripple 1.5s ease-in-out infinite;
+}
+
+#w2k-indicateur.pause::after {
+  border-color: #888;
+  animation: none;
+}
+
+@keyframes w2k-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.3); opacity: .7; }
+}
+
+@keyframes w2k-ripple {
+  0%   { transform: scale(1); opacity: .8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Barre de progression de page */
+#w2k-progression {
+  position: fixed;
+  top: 80px; /* Sous le header sticky */
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #C9922B, #E8B96A);
+  z-index: 999;
+  width: 0%;
+  transition: width .1s linear;
+}
+
+/* Tooltip indicateur */
+#w2k-indicateur[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 24px;
+  bottom: 0;
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: .75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+#w2k-indicateur:hover[data-tooltip]::before { opacity: 1; }
