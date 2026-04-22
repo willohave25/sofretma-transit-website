@@ -100,6 +100,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---- Slideshow hero (fond défilant automatique) ---- */
+  var heroSlides = document.querySelectorAll('.hero__slide');
+  if (heroSlides.length > 1) {
+    var slideActif = 0;
+    setInterval(function () {
+      heroSlides[slideActif].classList.remove('active');
+      slideActif = (slideActif + 1) % heroSlides.length;
+      heroSlides[slideActif].classList.add('active');
+    }, 5000); // changement toutes les 5 secondes
+  }
+
   /* ---- Scroll doux liens ancres ---- */
   document.querySelectorAll('a[href^="#"]').forEach(function (lien) {
     lien.addEventListener('click', function (e) {
