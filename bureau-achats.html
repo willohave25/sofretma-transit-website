@@ -7,8 +7,8 @@
   <meta name="description" content="Bureau d'achats et importation depuis Chine, Europe, Turquie, USA. Sourcing fournisseurs, contrôle qualité, expédition vers Abidjan. SOFRETMA TRANSIT commissionnaire agréé.">
   <meta property="og:title" content="Bureau d'Achats Import Abidjan | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/bureau-achats.html">
-  <link rel="canonical" href="https://sofretmatransit.com/bureau-achats.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/bureau-achats.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/bureau-achats.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 <body data-next-page="voyages.html">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -48,11 +48,10 @@
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-          <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -82,7 +81,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Bureau d'achats – SOFRETMA TRANSIT</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Bureau d'achats – SOFRETMA TRANSIT</h2>
           <p>Notre bureau d'achats intervient pour vos importations depuis l'étranger, en particulier depuis la Chine, l'Europe, la Turquie/Moyen-Orient, les États-Unis et le Canada. SOFRETMA TRANSIT vous accompagne dans la recherche de fournisseurs, la négociation des prix, le contrôle qualité des marchandises, la préparation des documents et la coordination de l'expédition jusqu'à Abidjan.</p>
           <p>En intégrant la logistique, le transit et le dédouanement, nous sécurisons le coût total de vos importations tout en garantissant la conformité aux normes ivoiriennes et internationales.</p>
           <div style="margin-top:24px;">
@@ -263,9 +262,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
