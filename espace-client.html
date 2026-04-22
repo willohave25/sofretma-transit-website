@@ -20,7 +20,7 @@
 <body data-next-page="mentions-legales.html">
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -29,11 +29,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -52,7 +52,7 @@
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -75,7 +75,7 @@
       <!-- Badge "Bientôt disponible" -->
       <div style="text-align:center;margin-bottom:32px;" class="fade-in">
         <span class="badge-bientot">⚙️ Mise en ligne prévue prochainement</span>
-        <p style="color:#666;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;">
+        <p style="color:var(--texte-muted);margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;">
           L'espace client est en cours de développement. En attendant, contactez-nous directement
           par WhatsApp ou par email pour le suivi de vos dossiers.
         </p>
@@ -133,9 +133,9 @@
       </div>
 
       <!-- Alternative contact -->
-      <div style="text-align:center;margin-top:48px;padding:32px;background:var(--gris-clair);border-radius:16px;max-width:700px;margin-left:auto;margin-right:auto;" class="fade-in">
-        <h3 style="color:var(--marron);margin-bottom:16px;">En attendant l'espace client, contactez-nous directement</h3>
-        <p style="color:#555;margin-bottom:24px;">Notre équipe vous répond rapidement pour le suivi de vos expéditions, vos questions et vos documents.</p>
+      <div style="text-align:center;margin-top:48px;padding:32px;background:var(--bleu-profond);border-radius:16px;max-width:700px;margin-left:auto;margin-right:auto;" class="fade-in">
+        <h3 style="color:var(--or);margin-bottom:16px;">En attendant l'espace client, contactez-nous directement</h3>
+        <p style="color:var(--texte-muted);margin-bottom:24px;">Notre équipe vous répond rapidement pour le suivi de vos expéditions, vos questions et vos documents.</p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
           <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20suivi%20de%20mon%20dossier."
              class="btn btn--or" target="_blank" rel="noopener">
@@ -210,9 +210,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
