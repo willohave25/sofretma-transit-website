@@ -7,8 +7,8 @@
   <meta name="description" content="Localisation SOFRETMA TRANSIT à Abidjan Cocody Anono. Îlot 120, Lot 3004, N°21. Accès depuis le Plateau, Cocody et l'aéroport.">
   <meta property="og:title" content="Localisation SOFRETMA TRANSIT Abidjan">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/localisation.html">
-  <link rel="canonical" href="https://sofretmatransit.com/localisation.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/localisation.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/localisation.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 <body data-next-page="actualites.html">
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -29,11 +29,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -52,7 +52,7 @@
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -76,9 +76,9 @@
 
         <!-- Informations accès -->
         <div>
-          <h2 style="color:var(--marron);margin-bottom:24px;">Notre adresse</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Notre adresse</h2>
 
-          <div style="background:var(--gris-clair);border-radius:12px;padding:24px;margin-bottom:24px;">
+          <div style="background:var(--bleu-profond);border-radius:12px;padding:24px;margin-bottom:24px;">
             <p style="font-weight:700;color:var(--vert-logo);margin-bottom:12px;font-size:1.1rem;">SOFRETMA TRANSIT</p>
             <p>Abidjan Cocody Anono</p>
             <p>Village ONEP BS 20</p>
@@ -99,8 +99,8 @@
             </a>
           </div>
 
-          <div style="background:var(--gris-clair);border-radius:12px;padding:24px;">
-            <p style="font-weight:700;color:var(--marron);margin-bottom:12px;">Horaires d'ouverture</p>
+          <div style="background:var(--bleu-profond);border-radius:12px;padding:24px;">
+            <p style="font-weight:700;color:var(--or);margin-bottom:12px;">Horaires d'ouverture</p>
             <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #ddd;">
               <span>Lundi – Vendredi</span>
               <strong>08h00 – 18h00</strong>
@@ -234,9 +234,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
