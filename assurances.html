@@ -7,8 +7,8 @@
   <meta name="description" content="Assurance de tous types de colis à Abidjan : véhicules, textiles, informatique, médical, agricole. Protection complète de vos marchandises en transit. SOFRETMA TRANSIT.">
   <meta property="og:title" content="Assurance Colis & Marchandises Abidjan | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/assurances.html">
-  <link rel="canonical" href="https://sofretmatransit.com/assurances.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/assurances.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/assurances.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 <body data-next-page="a-propos.html">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -48,11 +48,10 @@
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-          <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -97,7 +96,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Assurance de véhicules et gros engins</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Assurance de véhicules et gros engins</h2>
           <p>L'assurance de véhicules et de gros engins couvre les risques liés au transport, au dédouanement et à la mise en service, que ce soit pour un camion, une machine agricole, un engin de chantier, un conteneur roulant ou un véhicule particulier expédié à l'international.</p>
           <p>Cette couverture intervient en cas de dommage pendant le chargement, le transit, le déchargement, ou lors de la première utilisation sur le site du client. Elle peut être intégrée au fret maritime, aérien ou routier, avec des niveaux de couverture variables selon la valeur déclarée.</p>
         </div>
@@ -128,7 +127,7 @@
           </picture>
         </div>
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Assurance colis vestimentaires & marchandises générales</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Assurance colis vestimentaires & marchandises générales</h2>
           <p>Les colis vestimentaires, textiles, chaussures, accessoires ou autres marchandises générales sont également éligibles à une assurance de transport. Cette protection devient rapidement indispensable lors d'expéditions répétées, de gros volumes, ou dans des zones à risques élevés.</p>
           <p>L'assurance peut couvrir la perte, le vol, la casse, l'humidité, les délais critiques et les erreurs d'acheminement. Elle s'adapte à des logistiques spécifiques : groupage, FCL, LCL, expéditions express.</p>
         </div>
@@ -140,7 +139,7 @@
   <section class="section section--gris">
     <div class="container">
       <div class="fade-in" style="max-width:900px;margin:0 auto;">
-        <h2 style="color:var(--marron);margin-bottom:16px;text-align:center;">Assurance matériel informatique et médical</h2>
+        <h2 style="color:var(--or);margin-bottom:16px;text-align:center;">Assurance matériel informatique et médical</h2>
         <p>Les équipements informatiques (serveurs, ordinateurs, matériel réseau) et le matériel médical (équipements diagnostiques, appareils chirurgicaux) nécessitent une couverture spécifique adaptée à leur valeur et à leur fragilité. SOFRETMA TRANSIT propose des solutions d'assurance pour sécuriser ces envois sensibles, depuis la prise en charge jusqu'à la livraison finale.</p>
       </div>
     </div>
@@ -151,7 +150,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Assurance agricole</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Assurance agricole</h2>
           <p>Les produits agricoles, les intrants, les machines agricoles et les récoltes en transit bénéficient de garanties adaptées aux risques spécifiques du secteur : humidité, température, délais de livraison critiques liés aux saisons.</p>
           <p>Notre couverture agricole protège l'ensemble de la chaîne, du producteur au distributeur, en Côte d'Ivoire et dans toute l'Afrique de l'Ouest.</p>
         </div>
@@ -238,9 +237,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
