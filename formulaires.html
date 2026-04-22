@@ -7,8 +7,8 @@
   <meta name="description" content="Formulaires de demande de devis SOFRETMA TRANSIT : maritime, aérien, ferroviaire, terrestre, bureau d'achats, voyages, prestations et marketing digital.">
   <meta property="og:title" content="Formulaires de Demande | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/formulaires.html">
-  <link rel="canonical" href="https://sofretmatransit.com/formulaires.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/formulaires.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/formulaires.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 <body data-next-page="localisation.html">
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -29,11 +29,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -52,7 +52,7 @@
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -88,7 +88,7 @@
 
         <!-- ---- Transport Maritime ---- -->
         <div id="form-maritime" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport maritime</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Transport maritime</h2>
           <form class="formulaire" data-categorie="Transport maritime">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -153,7 +153,7 @@
 
         <!-- ---- Transport Aérien ---- -->
         <div id="form-aerien" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport aérien</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Transport aérien</h2>
           <form class="formulaire" data-categorie="Transport aérien">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -218,7 +218,7 @@
 
         <!-- ---- Transport Ferroviaire ---- -->
         <div id="form-ferroviaire" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport ferroviaire</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Transport ferroviaire</h2>
           <form class="formulaire" data-categorie="Transport ferroviaire">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -272,7 +272,7 @@
 
         <!-- ---- Transport Terrestre ---- -->
         <div id="form-terrestre" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Transport terrestre</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Transport terrestre</h2>
           <form class="formulaire" data-categorie="Transport terrestre">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -335,7 +335,7 @@
 
         <!-- ---- Bureau d'achats ---- -->
         <div id="form-achats" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Bureau d'achats</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Bureau d'achats</h2>
           <form class="formulaire" data-categorie="Bureau d'achats">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -391,7 +391,7 @@
 
         <!-- ---- Voyages ---- -->
         <div id="form-voyages" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Agent de voyages</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Agent de voyages</h2>
           <form class="formulaire" data-categorie="Agent de voyages">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -448,7 +448,7 @@
 
         <!-- ---- Prestations ---- -->
         <div id="form-prestations" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Prestations de services</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Prestations de services</h2>
           <form class="formulaire" data-categorie="Prestations de services">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -494,7 +494,7 @@
 
         <!-- ---- Marketing digital ---- -->
         <div id="form-marketing" class="onglet__contenu" role="tabpanel">
-          <h2 style="color:var(--marron);margin-bottom:24px;">Demande de devis — Marketing digital</h2>
+          <h2 style="color:var(--or);margin-bottom:24px;">Demande de devis — Marketing digital</h2>
           <form class="formulaire" data-categorie="Marketing digital">
             <div class="formulaire__ligne">
               <div class="formulaire__groupe">
@@ -604,10 +604,11 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/formulaires.js"></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
