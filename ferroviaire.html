@@ -7,8 +7,8 @@
   <meta name="description" content="Transport ferroviaire Abidjan–Ouagadougou via SITARAIL. Vrac, conteneurs, véhicules. SOFRETMA TRANSIT, solution logistique économique Côte d'Ivoire Burkina Faso.">
   <meta property="og:title" content="Transport Ferroviaire Abidjan | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/ferroviaire.html">
-  <link rel="canonical" href="https://sofretmatransit.com/ferroviaire.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/ferroviaire.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/ferroviaire.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 <body data-next-page="terrestre.html">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -51,7 +51,7 @@
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -81,7 +81,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Transport ferroviaire – SOFRETMA TRANSIT</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Transport ferroviaire – SOFRETMA TRANSIT</h2>
           <p>Le transport ferroviaire offre une solution économique et fiable pour les flux Abidjan–Ouagadougou, via le réseau exploité par SITARAIL. SOFRETMA TRANSIT propose ce mode de transport pour vos marchandises en vrac, conteneurs et véhicules, particulièrement adaptés aux volumes réguliers entre Abidjan et le Burkina Faso.</p>
           <p>Notre intervention couvre la planification du train, la manutention en gare, le contrôle des documents et la coordination avec les transporteurs routiers pour la première et la dernière étape.</p>
           <p>Le ferroviaire s'inscrit dans une logique de chargement plus lourd et de coûts réduits, particulièrement intéressant pour les flux de transit Abidjan–Ouagadougou.</p>
@@ -229,9 +229,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
