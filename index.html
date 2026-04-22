@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transit International Abidjan | SOFRETMA TRANSIT</title>
-  <meta name="description" content="SOFRETMA TRANSIT, commissionnaire agréé à Abidjan. Fret maritime, aérien, terrestre, dédouanement et logistique internationale en Côte d'Ivoire et Afrique de l'Ouest.">
-  <meta property="og:title" content="Transit International Abidjan | SOFRETMA TRANSIT">
-  <meta property="og:description" content="Votre partenaire logistique international basé à Abidjan. Fret maritime, aérien, ferroviaire, terrestre et dédouanement.">
+  <title>SOFRETMA TRANSIT – Transitaire de Référence à Abidjan</title>
+  <meta name="description" content="SOFRETMA TRANSIT, commissionnaire agréé en douane à Abidjan. Fret maritime, aérien, ferroviaire, terrestre. Import/Export depuis la Côte d'Ivoire vers le monde.">
+  <meta property="og:title" content="SOFRETMA TRANSIT – Votre passerelle logistique depuis Abidjan">
+  <meta property="og:description" content="Commissionnaire agréé en douane. Fret Maritime & Aérien. Import/Export depuis Abidjan.">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/index.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com">
   <meta property="og:type" content="website">
-  <link rel="canonical" href="https://sofretmatransit.com/index.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/">
   <link rel="icon" href="images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts : Playfair Display + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Feuille de styles principale + composants -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/auto-scroll.css">
   <link rel="stylesheet" href="css/chatbot.css">
 
-  <!-- JSON-LD LocalBusiness -->
+  <!-- Données structurées LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,7 +33,7 @@
     "name": "SOFRETMA TRANSIT",
     "description": "Commissionnaire agréé spécialisé dans le transit international, fret maritime, aérien, ferroviaire et terrestre depuis Abidjan.",
     "url": "https://www.sofretmatransit.com",
-    "telephone": "+22501020201 79",
+    "telephone": "+2250102020179",
     "email": "contact@sofretmatransit.com",
     "address": {
       "@type": "PostalAddress",
@@ -45,7 +48,7 @@
     "sameAs": [
       "https://web.facebook.com/p/Sofretma-Transit-61567939505584/",
       "https://www.tiktok.com/@sofretma.transit6/",
-      "https://www.linkedin.com/in/ivan-eric-tekele-934831230/"
+      "https://www.linkedin.com/company/sofretma-transit/"
     ]
   }
   </script>
@@ -53,7 +56,7 @@
 <body data-next-page="maritime.html">
 
   <!-- ========== HEADER ========== -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
 
@@ -61,44 +64,47 @@
         <a href="index.html" class="header__logo">
           <picture>
             <source srcset="images/logo-sofretma.webp" type="image/webp">
-            <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT — Logistique internationale Abidjan" width="180" height="56">
+            <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT — Logistique internationale Abidjan" width="160" height="56">
           </picture>
         </a>
 
-        <!-- Navigation -->
-        <nav class="header__nav" aria-label="Navigation principale">
+        <!-- Navigation principale -->
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
-            <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
+            <li class="nav__item"><a href="index.html" class="nav__lien nav__lien--actif">Accueil</a></li>
 
+            <!-- Dropdown Services -->
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien" aria-haspopup="true">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">
+                Services <span class="nav__fleche" aria-hidden="true">&#9660;</span>
+              </button>
               <ul class="dropdown" role="menu">
-                <li><a href="maritime.html" class="dropdown__lien" role="menuitem">Transport maritime</a></li>
-                <li><a href="aerien.html" class="dropdown__lien" role="menuitem">Transport aérien</a></li>
-                <li><a href="ferroviaire.html" class="dropdown__lien" role="menuitem">Transport ferroviaire</a></li>
-                <li><a href="terrestre.html" class="dropdown__lien" role="menuitem">Transport terrestre</a></li>
-                <li><a href="bureau-achats.html" class="dropdown__lien" role="menuitem">Bureau d'achats</a></li>
-                <li><a href="voyages.html" class="dropdown__lien" role="menuitem">Agent de voyages</a></li>
-                <li><a href="prestations.html" class="dropdown__lien" role="menuitem">Prestations de services</a></li>
-                <li><a href="marketing-digital.html" class="dropdown__lien" role="menuitem">Marketing digital</a></li>
+                <li><a href="maritime.html" class="dropdown__lien" role="menuitem">Transport Maritime</a></li>
+                <li><a href="aerien.html" class="dropdown__lien" role="menuitem">Transport Aérien</a></li>
+                <li><a href="ferroviaire.html" class="dropdown__lien" role="menuitem">Transport Ferroviaire</a></li>
+                <li><a href="terrestre.html" class="dropdown__lien" role="menuitem">Transport Terrestre</a></li>
+                <li><a href="bureau-achats.html" class="dropdown__lien" role="menuitem">Bureau d'Achats</a></li>
+                <li><a href="voyages.html" class="dropdown__lien" role="menuitem">Agent de Voyages</a></li>
+                <li><a href="prestations.html" class="dropdown__lien" role="menuitem">Prestations de Services</a></li>
+                <li><a href="marketing-digital.html" class="dropdown__lien" role="menuitem">Marketing Digital</a></li>
                 <li><a href="assurances.html" class="dropdown__lien" role="menuitem">Assurances</a></li>
               </ul>
             </li>
 
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
+            <li class="nav__item"><a href="actualites.html" class="nav__lien">Actualités</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-          <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
           </ul>
         </nav>
 
-        <!-- CTA -->
+        <!-- Bouton CTA -->
         <div class="header__cta">
-          <a href="formulaires.html" class="btn btn--or">Demande de devis</a>
+          <a href="formulaires.html" class="btn btn--or">Demande de Devis</a>
         </div>
 
-        <!-- Hamburger -->
-        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <!-- Hamburger mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
           <span></span><span></span><span></span>
         </button>
 
@@ -106,267 +112,356 @@
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero">
-    <div class="hero__image">
-      <picture>
-        <source srcset="images/hero/hero-accueil.webp" type="image/webp">
-        <img src="images/hero/hero-accueil.jpg" alt="Port d'Abidjan — SOFRETMA TRANSIT transit international">
-      </picture>
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="container">
-      <div class="hero__contenu">
-        <span class="hero__badge">Commissionnaire agréé — Abidjan, Côte d'Ivoire</span>
-        <h1 class="hero__titre">
-          SOFRETMA TRANSIT —<br>
-          <span>Partenaire logistique international</span>
-        </h1>
-        <p class="hero__texte">
-          Transit international, fret maritime, aérien, ferroviaire et routier depuis Abidjan.
-          Nous simplifions vos opérations d'import‑export vers l'Europe, l'Amérique du Nord,
-          l'Asie et toute l'Afrique de l'Ouest.
-        </p>
-        <div class="hero__actions">
-          <a href="formulaires.html" class="btn btn--or">Demande de devis</a>
-          <a href="a-propos.html" class="btn btn--outline-blanc">Découvrir SOFRETMA</a>
-        </div>
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="accueil">
+      <!-- Image de fond : navire cargo -->
+      <div class="hero__image">
+        <picture>
+          <source srcset="images/hero-cargo.webp" type="image/webp">
+          <img src="images/hero-cargo.jpg" alt="Navire porte-conteneurs au port – SOFRETMA TRANSIT Abidjan" fetchpriority="high">
+        </picture>
       </div>
-    </div>
-  </section>
+      <div class="hero__overlay" aria-hidden="true"></div>
 
-  <!-- ========== PARTENAIRE CI ========== -->
-  <section class="section">
-    <div class="container">
-      <div class="section__titre fade-in">
-        <h2>Votre partenaire logistique en Côte d'Ivoire</h2>
-        <p class="section__sous-titre">
-          SOFRETMA TRANSIT accompagne entreprises et particuliers dans toutes leurs opérations
-          de transit international, de fret maritime et d'import‑export depuis Abidjan.
-        </p>
-      </div>
-
-      <div class="avantages fade-in">
-        <div class="avantage">
-          <div class="avantage__icone">🔒</div>
-          <div>
-            <p class="avantage__titre">Fiabilité & Transparence</p>
-            <p class="avantage__texte">Traçabilité rigoureuse et communication claire à chaque étape de votre envoi.</p>
-          </div>
-        </div>
-        <div class="avantage">
-          <div class="avantage__icone">🌍</div>
-          <div>
-            <p class="avantage__titre">Couverture internationale</p>
-            <p class="avantage__texte">Connexions maritimes, aériennes, ferroviaires et routières vers tous les continents.</p>
-          </div>
-        </div>
-        <div class="avantage">
-          <div class="avantage__icone">📋</div>
-          <div>
-            <p class="avantage__titre">Commissionnaire agréé</p>
-            <p class="avantage__texte">Nous maîtrisons l'ensemble des procédures portuaires et aéroportuaires d'Abidjan.</p>
-          </div>
-        </div>
-        <div class="avantage">
-          <div class="avantage__icone">🤝</div>
-          <div>
-            <p class="avantage__titre">Accompagnement personnalisé</p>
-            <p class="avantage__texte">Un interlocuteur unique du devis à la livraison finale, pour chaque dossier.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CHIFFRES CLÉS ========== -->
-  <section class="section section--vert">
-    <div class="container">
-      <div class="section__titre fade-in">
-        <h2>Nos chiffres clés</h2>
-        <p class="section__sous-titre" style="color:rgba(255,255,255,.8)">
-          Créée en 2025, SOFRETMA TRANSIT s'impose déjà comme un acteur de référence du transit international à Abidjan.
-        </p>
-      </div>
-      <div class="chiffres fade-in">
-        <div>
-          <span class="chiffre__nombre" data-compteur="50">0</span>
-          <span class="chiffre__label">Clients accompagnés</span>
-        </div>
-        <div>
-          <span class="chiffre__nombre" data-compteur="30">0</span>
-          <span class="chiffre__label">Destinations couvertes</span>
-        </div>
-        <div>
-          <span class="chiffre__nombre" data-compteur="9">0</span>
-          <span class="chiffre__label">Services disponibles</span>
-        </div>
-        <div>
-          <span class="chiffre__nombre" data-compteur="6">0</span>
-          <span class="chiffre__label">Pays AOF connectés</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== NOS SOLUTIONS ========== -->
-  <section class="section section--gris">
-    <div class="container">
-      <div class="section__titre fade-in">
-        <h2>Nos solutions de transport</h2>
-        <p class="section__sous-titre">
-          Plusieurs modes de transport adaptés à vos besoins, pour optimiser coût, délai et fiabilité.
-        </p>
-      </div>
-
-      <div class="cards-grille fade-in">
-
-        <div class="card">
-          <div class="card__icone">⚓</div>
-          <h3 class="card__titre">Transport maritime</h3>
-          <p class="card__texte">FCL et LCL depuis le Port d'Abidjan vers l'Europe, l'Amérique du Nord et l'Asie.</p>
-          <a href="maritime.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">✈️</div>
-          <h3 class="card__titre">Transport aérien</h3>
-          <p class="card__texte">Fret aérien express depuis Abidjan pour vos envois urgents et marchandises sensibles.</p>
-          <a href="aerien.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">🚂</div>
-          <h3 class="card__titre">Transport ferroviaire</h3>
-          <p class="card__texte">Liaison Abidjan–Ouagadougou via SITARAIL, économique pour les volumes réguliers.</p>
-          <a href="ferroviaire.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">🚛</div>
-          <h3 class="card__titre">Transport terrestre</h3>
-          <p class="card__texte">Flotte 8T à 30T + semi-remorques sur tous les corridors d'Afrique de l'Ouest.</p>
-          <a href="terrestre.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">🛒</div>
-          <h3 class="card__titre">Bureau d'achats</h3>
-          <p class="card__texte">Import depuis la Chine, l'Europe, la Turquie et les USA avec contrôle qualité intégré.</p>
-          <a href="bureau-achats.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">🌐</div>
-          <h3 class="card__titre">Agent de voyages</h3>
-          <p class="card__texte">Billets, hôtels, voyages d'affaires et assistance visa depuis Abidjan.</p>
-          <a href="voyages.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">📋</div>
-          <h3 class="card__titre">Prestations de services</h3>
-          <p class="card__texte">Dédouanement, documentation et conseil en réglementation pour vos opérations.</p>
-          <a href="prestations.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">💻</div>
-          <h3 class="card__titre">Marketing digital</h3>
-          <p class="card__texte">Conception de sites web professionnels et applications métiers pour les entreprises.</p>
-          <a href="marketing-digital.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-        <div class="card">
-          <div class="card__icone">🛡️</div>
-          <h3 class="card__titre">Assurances</h3>
-          <p class="card__texte">Protection de tous vos colis : véhicules, textiles, informatique, médical, agricole.</p>
-          <a href="assurances.html" class="card__lien">En savoir plus →</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== POURQUOI NOUS ========== -->
-  <section class="section">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
-        <div>
-          <h2 style="color:var(--marron);margin-bottom:24px;">Pourquoi choisir SOFRETMA TRANSIT ?</h2>
-          <p>
-            SOFRETMA TRANSIT vous offre une expertise intégrée sur le transit international, le fret maritime,
-            l'import‑export et le dédouanement à Abidjan. Nos équipes connaissent parfaitement les procédures
-            portuaires et aéroportuaires, ce qui réduit les risques de retards et de surcoûts.
+      <div class="container">
+        <div class="hero__contenu fade-in">
+          <h1 class="hero__titre">SOFRETMA TRANSIT</h1>
+          <p class="hero__sous-titre">Votre passerelle logistique depuis Abidjan</p>
+          <p class="hero__accroche">
+            Commissionnaire agréé en douane &middot; Import / Export &middot; Fret Maritime &amp; Aérien
           </p>
-          <p>
-            Notre approche est personnalisée, adaptée à chaque client — multinationale, PME ou particulier.
-            Chaque dossier est suivi individuellement, du devis à la livraison.
-          </p>
-          <p>
-            Notre position stratégique à Abidjan nous permet d'optimiser les coûts et les délais
-            pour vos opérations en Afrique de l'Ouest.
-          </p>
-          <div style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;">
-            <a href="formulaires.html" class="btn btn--or">Demander un devis</a>
-            <a href="contact.html" class="btn btn--outline-or">Nous contacter</a>
+          <div class="hero__actions">
+            <a href="formulaires.html" class="btn btn--emeraude">&#128203; Demande de Devis</a>
+            <a href="a-propos.html" class="btn btn--outline-blanc">Découvrir SOFRETMA</a>
           </div>
         </div>
-        <div>
-          <picture>
-            <source srcset="images/hero/dirigeant-bureau.webp" type="image/webp">
-            <img src="images/hero/dirigeant-bureau.jpg"
-                 alt="M. TEKELE TEKELE Ivan Eric — Dirigeant SOFRETMA TRANSIT Abidjan"
-                 loading="lazy"
-                 style="border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);width:100%;">
-          </picture>
+      </div>
+    </section>
+
+    <!-- ========== NOS SERVICES ========== -->
+    <section class="section" id="services" aria-labelledby="services-titre">
+      <div class="container">
+        <div class="section__titre fade-in">
+          <h2 id="services-titre">Nos Services</h2>
+          <p class="section__sous-titre">Une offre complète pour vos besoins logistiques internationaux</p>
+        </div>
+
+        <div class="services-grille fade-in">
+
+          <!-- Transport Maritime -->
+          <article class="service-card">
+            <a href="maritime.html" class="service-card__lien" aria-label="En savoir plus sur le Transport Maritime">
+              <div class="service-card__img-wrap">
+                <picture>
+                  <source srcset="images/service-maritime.webp" type="image/webp">
+                  <img src="images/service-maritime.jpg" alt="Navire cargo en mer – Transport Maritime SOFRETMA" loading="lazy" class="service-card__img">
+                </picture>
+                <div class="service-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="service-card__corps">
+                <h3 class="service-card__titre">Transport Maritime</h3>
+                <p class="service-card__texte">Gestion complète de vos expéditions maritimes import/export.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Transport Aérien -->
+          <article class="service-card">
+            <a href="aerien.html" class="service-card__lien" aria-label="En savoir plus sur le Transport Aérien">
+              <div class="service-card__img-wrap">
+                <picture>
+                  <source srcset="images/service-aerien.webp" type="image/webp">
+                  <img src="images/service-aerien.jpg" alt="Avion cargo – Transport Aérien SOFRETMA" loading="lazy" class="service-card__img">
+                </picture>
+                <div class="service-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="service-card__corps">
+                <h3 class="service-card__titre">Transport Aérien</h3>
+                <p class="service-card__texte">Solutions aériennes rapides pour vos marchandises urgentes.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Transport Ferroviaire -->
+          <article class="service-card">
+            <a href="ferroviaire.html" class="service-card__lien" aria-label="En savoir plus sur le Transport Ferroviaire">
+              <div class="service-card__img-wrap">
+                <picture>
+                  <source srcset="images/service-ferroviaire.webp" type="image/webp">
+                  <img src="images/service-ferroviaire.jpg" alt="Train de fret – Transport Ferroviaire SOFRETMA" loading="lazy" class="service-card__img">
+                </picture>
+                <div class="service-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="service-card__corps">
+                <h3 class="service-card__titre">Transport Ferroviaire</h3>
+                <p class="service-card__texte">Acheminement ferroviaire fiable pour vos cargaisons lourdes.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Transport Terrestre -->
+          <article class="service-card">
+            <a href="terrestre.html" class="service-card__lien" aria-label="En savoir plus sur le Transport Terrestre">
+              <div class="service-card__img-wrap">
+                <picture>
+                  <source srcset="images/service-terrestre.webp" type="image/webp">
+                  <img src="images/service-terrestre.jpg" alt="Camions logistiques – Transport Terrestre SOFRETMA" loading="lazy" class="service-card__img">
+                </picture>
+                <div class="service-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="service-card__corps">
+                <h3 class="service-card__titre">Transport Terrestre</h3>
+                <p class="service-card__texte">Réseau routier étendu pour la distribution locale et régionale.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Bureau d'Achats & Marketing Digital -->
+          <article class="service-card">
+            <a href="bureau-achats.html" class="service-card__lien" aria-label="En savoir plus sur le Bureau d'Achats">
+              <div class="service-card__img-wrap">
+                <picture>
+                  <source srcset="images/service-bureau-achats.webp" type="image/webp">
+                  <img src="images/service-bureau-achats.jpg" alt="Bureau moderne et carte mondiale – Bureau d'Achats SOFRETMA" loading="lazy" class="service-card__img">
+                </picture>
+                <div class="service-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="service-card__corps">
+                <h3 class="service-card__titre">Bureau d'Achats &amp; Marketing Digital</h3>
+                <p class="service-card__texte">Sourcing international et visibilité digitale pour votre activité.</p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Assurances & Voyages -->
+          <article class="service-card">
+            <a href="assurances.html" class="service-card__lien" aria-label="En savoir plus sur les Assurances et Voyages">
+              <div class="service-card__img-wrap">
+                <picture>
+                  <source srcset="images/service-assurances.webp" type="image/webp">
+                  <img src="images/service-assurances.jpg" alt="Poignée de main professionnelle – Assurances SOFRETMA" loading="lazy" class="service-card__img">
+                </picture>
+                <div class="service-card__overlay" aria-hidden="true"></div>
+              </div>
+              <div class="service-card__corps">
+                <h3 class="service-card__titre">Assurances &amp; Voyages</h3>
+                <p class="service-card__texte">Protection de vos marchandises et organisation de vos déplacements.</p>
+              </div>
+            </a>
+          </article>
+
+        </div><!-- /services-grille -->
+      </div>
+    </section>
+
+    <!-- ========== EXPERTISE & FRET ========== -->
+    <section class="section section--surface" id="expertise" aria-labelledby="expertise-titre">
+      <div class="container">
+        <div class="expertise-layout fade-in">
+
+          <!-- Image gauche -->
+          <div class="expertise__visuel">
+            <picture>
+              <source srcset="images/expertise-fret.webp" type="image/webp">
+              <img src="images/expertise-fret.jpg" alt="Centre de contrôle logistique avec carte mondiale – Expertise SOFRETMA TRANSIT" loading="lazy" class="expertise__img">
+            </picture>
+          </div>
+
+          <!-- Contenu texte droite -->
+          <div class="expertise__texte">
+            <h2 class="section__titre--gauche" id="expertise-titre">Société de Fret Maritime et Aérien de Référence</h2>
+            <p class="expertise__lead">Maîtrise des flux import-export entre Abidjan et le monde</p>
+            <p>
+              Fort de plusieurs années d'expérience, SOFRETMA TRANSIT s'est imposé comme un acteur incontournable
+              du fret international depuis Abidjan. Notre expertise couvre l'ensemble des corridors logistiques
+              reliant la Côte d'Ivoire à l'Europe, l'Asie et les Amériques.
+            </p>
+            <ul class="expertise__liste">
+              <li class="expertise__item">
+                <span class="expertise__icone" aria-hidden="true">🌍</span>
+                <div><strong>Couverture Mondiale</strong> – Europe &middot; Asie &middot; Amérique &middot; Afrique</div>
+              </li>
+              <li class="expertise__item">
+                <span class="expertise__icone" aria-hidden="true">⚓</span>
+                <div><strong>Fret Maritime</strong> – Gestion des conteneurs FCL &amp; LCL, connaissements, manifestes</div>
+              </li>
+              <li class="expertise__item">
+                <span class="expertise__icone" aria-hidden="true">✈️</span>
+                <div><strong>Fret Aérien</strong> – Lettres de transport aérien (LTA), fret express et groupage</div>
+              </li>
+              <li class="expertise__item">
+                <span class="expertise__icone" aria-hidden="true">✅</span>
+                <div><strong>Dédouanement Fiable</strong> – Commissionnaire agréé en douane, maîtrise des procédures ivoiriennes et internationales</div>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== CTA DEVIS ========== -->
-  <section class="section section--marron">
-    <div class="container" style="text-align:center;">
-      <h2 style="color:var(--or-clair);margin-bottom:16px;" class="fade-in">Prêt à expédier vos marchandises ?</h2>
-      <p style="color:rgba(255,255,255,.85);max-width:600px;margin:0 auto 32px;" class="fade-in">
-        Obtenez un devis personnalisé en quelques minutes.
-        Notre équipe vous répond dans les meilleurs délais.
-      </p>
-      <div class="fade-in" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <a href="formulaires.html" class="btn btn--or">Remplir un formulaire</a>
-        <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20devis."
-           class="btn btn--outline-blanc" target="_blank" rel="noopener">
-          💬 WhatsApp direct
-        </a>
+    <!-- ========== POURQUOI NOUS CHOISIR ========== -->
+    <section class="section" id="pourquoi" aria-labelledby="pourquoi-titre">
+      <div class="container">
+        <div class="section__titre fade-in">
+          <h2 id="pourquoi-titre">Pourquoi Choisir SOFRETMA TRANSIT ?</h2>
+          <p class="section__sous-titre">L'excellence logistique au service de votre croissance</p>
+        </div>
+
+        <div class="atouts-grille fade-in">
+
+          <!-- Atout 1 -->
+          <div class="atout-card atout-card--1">
+            <div class="atout-card__icone-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <h3 class="atout-card__titre">Traçabilité en Temps Réel</h3>
+            <p class="atout-card__texte">Suivez vos marchandises à chaque étape du transit, de l'enlèvement à la livraison finale, grâce à nos outils de suivi avancés.</p>
+          </div>
+
+          <!-- Atout 2 -->
+          <div class="atout-card atout-card--2">
+            <div class="atout-card__icone-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>
+              </svg>
+            </div>
+            <h3 class="atout-card__titre">Couverture Mondiale</h3>
+            <p class="atout-card__texte">Un réseau de partenaires fiables sur tous les continents pour garantir l'acheminement de vos cargaisons partout dans le monde.</p>
+          </div>
+
+          <!-- Atout 3 -->
+          <div class="atout-card atout-card--3">
+            <div class="atout-card__icone-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 0 0 1.946-.806 3.42 3.42 0 0 1 4.438 0 3.42 3.42 0 0 0 1.946.806 3.42 3.42 0 0 1 3.138 3.138 3.42 3.42 0 0 0 .806 1.946 3.42 3.42 0 0 1 0 4.438 3.42 3.42 0 0 0-.806 1.946 3.42 3.42 0 0 1-3.138 3.138 3.42 3.42 0 0 0-1.946.806 3.42 3.42 0 0 1-4.438 0 3.42 3.42 0 0 0-1.946-.806 3.42 3.42 0 0 1-3.138-3.138 3.42 3.42 0 0 0-.806-1.946 3.42 3.42 0 0 1 0-4.438 3.42 3.42 0 0 0 .806-1.946 3.42 3.42 0 0 1 3.138-3.138z"/>
+              </svg>
+            </div>
+            <h3 class="atout-card__titre">Agrément en Douane</h3>
+            <p class="atout-card__texte">Commissionnaire officiellement agréé par les autorités douanières ivoiriennes. Vos opérations d'import/export en toute conformité.</p>
+          </div>
+
+        </div><!-- /atouts-grille -->
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ========== CHIFFRES CLÉS ========== -->
+    <section class="section section--surface" id="chiffres" aria-labelledby="chiffres-titre">
+      <div class="container">
+        <div class="section__titre fade-in">
+          <h2 id="chiffres-titre">Nos Chiffres Clés</h2>
+          <p class="section__sous-titre">Un acteur en pleine croissance du transit international à Abidjan</p>
+        </div>
+        <div class="chiffres fade-in">
+          <div>
+            <span class="chiffre__nombre" data-compteur="50">0</span>
+            <span class="chiffre__label">Clients accompagnés</span>
+          </div>
+          <div>
+            <span class="chiffre__nombre" data-compteur="30">0</span>
+            <span class="chiffre__label">Destinations couvertes</span>
+          </div>
+          <div>
+            <span class="chiffre__nombre" data-compteur="9">0</span>
+            <span class="chiffre__label">Services disponibles</span>
+          </div>
+          <div>
+            <span class="chiffre__nombre" data-compteur="6">0</span>
+            <span class="chiffre__label">Pays AOF connectés</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TÉMOIGNAGES ========== -->
+    <section class="section" id="temoignages-accueil" aria-labelledby="temoignages-titre">
+      <div class="container">
+        <div class="section__titre fade-in">
+          <h2 id="temoignages-titre">Ils Nous Font Confiance</h2>
+          <p class="section__sous-titre">La satisfaction de nos clients, notre meilleure référence</p>
+        </div>
+
+        <div class="cards-grille fade-in">
+          <blockquote class="temoignage">
+            <p class="temoignage__texte">"SOFRETMA TRANSIT a géré notre importation depuis la Chine avec une efficacité remarquable. Dédouanement rapide, marchandises livrées dans les délais."</p>
+            <footer>
+              <p class="temoignage__auteur">Kouassi A.</p>
+              <p class="temoignage__poste">Directeur Commercial, Abidjan</p>
+            </footer>
+          </blockquote>
+          <blockquote class="temoignage">
+            <p class="temoignage__texte">"Équipe professionnelle et réactive. Notre fret aérien urgent a été traité en un temps record. Je recommande SOFRETMA TRANSIT sans hésitation."</p>
+            <footer>
+              <p class="temoignage__auteur">Fatou D.</p>
+              <p class="temoignage__poste">Responsable Logistique, Dakar</p>
+            </footer>
+          </blockquote>
+          <blockquote class="temoignage">
+            <p class="temoignage__texte">"Grâce à leur réseau et leur expertise en dédouanement, nos opérations d'export vers l'Europe se déroulent sans accroc. Excellente collaboration."</p>
+            <footer>
+              <p class="temoignage__auteur">Jean-Marc T.</p>
+              <p class="temoignage__poste">PDG, Groupe Import-Export CI</p>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <a href="temoignages.html" class="btn btn--outline-or">Voir tous les témoignages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA DEVIS ========== -->
+    <section class="section section--cta" aria-label="Appel à l'action devis">
+      <div class="container" style="text-align:center;">
+        <h2 class="fade-in" style="color:var(--or);margin-bottom:16px;">Prêt à expédier vos marchandises ?</h2>
+        <p class="fade-in" style="color:var(--texte-clair);opacity:.85;max-width:600px;margin:0 auto 32px;">
+          Obtenez un devis personnalisé en quelques minutes. Notre équipe vous répond dans les meilleurs délais.
+        </p>
+        <div class="fade-in" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="formulaires.html" class="btn btn--or">📋 Remplir un formulaire</a>
+          <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20devis."
+             class="btn btn--outline-blanc" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp direct
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
+    <div class="footer__vague" aria-hidden="true"></div>
     <div class="container">
       <div class="footer__grille">
 
-        <!-- Colonne 1 : Logo + desc -->
-        <div>
-          <picture>
-            <source srcset="images/logo-sofretma-blanc.webp" type="image/webp">
-            <img src="images/logo-sofretma-blanc.png" alt="SOFRETMA TRANSIT" class="footer__logo">
-          </picture>
-          <p class="footer__desc">
-            Votre commissionnaire agréé de transit international basé à Abidjan.
-            Fret maritime, aérien, ferroviaire, terrestre et dédouanement.
+        <!-- Colonne 1 : Logo + Identité légale -->
+        <div class="footer__col">
+          <a href="index.html">
+            <picture>
+              <source srcset="images/logo-sofretma-blanc.webp" type="image/webp">
+              <img src="images/logo-sofretma-blanc.png" alt="SOFRETMA TRANSIT" class="footer__logo">
+            </picture>
+          </a>
+          <p class="footer__slogan"><em>La Connexion des Marchés Internationaux</em></p>
+          <p class="footer__desc">Votre transitaire de référence en Côte d'Ivoire.<br>Votre partenaire logistique de confiance depuis Abidjan.</p>
+          <p class="footer__legal">
+            <strong>SOFRETMA</strong> – Société de Fret Maritime et Aérien<br>
+            Capital : 1.000.000 F CFA &nbsp;|&nbsp; CC : 200370C<br>
+            RCCM : N°CI-ABJ-03-2025-B13-00904 du 29/01/2025<br>
+            Tribunal du Commerce d'Abidjan
           </p>
-          <div class="footer__reseaux">
-            <a href="https://web.facebook.com/p/Sofretma-Transit-61567939505584/" target="_blank" rel="noopener" class="footer__reseau" aria-label="Facebook SOFRETMA TRANSIT">f</a>
-            <a href="https://www.tiktok.com/@sofretma.transit6/" target="_blank" rel="noopener" class="footer__reseau" aria-label="TikTok SOFRETMA TRANSIT">TK</a>
-            <a href="https://www.linkedin.com/in/ivan-eric-tekele-934831230/" target="_blank" rel="noopener" class="footer__reseau" aria-label="LinkedIn SOFRETMA TRANSIT">in</a>
-          </div>
         </div>
 
-        <!-- Colonne 2 : Navigation rapide -->
-        <div>
+        <!-- Colonne 2 : Navigation + Services -->
+        <div class="footer__col">
           <p class="footer__titre">Navigation</p>
           <ul class="footer__liens">
             <li><a href="index.html" class="footer__lien">Accueil</a></li>
@@ -374,37 +469,41 @@
             <li><a href="temoignages.html" class="footer__lien">Témoignages</a></li>
             <li><a href="actualites.html" class="footer__lien">Actualités</a></li>
             <li><a href="contact.html" class="footer__lien">Contact</a></li>
-            <li><a href="formulaires.html" class="footer__lien">Demande de devis</a></li>
+            <li><a href="formulaires.html" class="footer__lien">Demande de Devis</a></li>
           </ul>
-        </div>
-
-        <!-- Colonne 3 : Services -->
-        <div>
-          <p class="footer__titre">Nos services</p>
+          <p class="footer__titre" style="margin-top:24px;">Nos Services</p>
           <ul class="footer__liens">
-            <li><a href="maritime.html" class="footer__lien">Transport maritime</a></li>
-            <li><a href="aerien.html" class="footer__lien">Transport aérien</a></li>
-            <li><a href="ferroviaire.html" class="footer__lien">Transport ferroviaire</a></li>
-            <li><a href="terrestre.html" class="footer__lien">Transport terrestre</a></li>
-            <li><a href="bureau-achats.html" class="footer__lien">Bureau d'achats</a></li>
-            <li><a href="voyages.html" class="footer__lien">Agent de voyages</a></li>
+            <li><a href="maritime.html" class="footer__lien">Transport Maritime</a></li>
+            <li><a href="aerien.html" class="footer__lien">Transport Aérien</a></li>
+            <li><a href="ferroviaire.html" class="footer__lien">Transport Ferroviaire</a></li>
+            <li><a href="terrestre.html" class="footer__lien">Transport Terrestre</a></li>
+            <li><a href="bureau-achats.html" class="footer__lien">Bureau d'Achats</a></li>
+            <li><a href="voyages.html" class="footer__lien">Agent de Voyages</a></li>
             <li><a href="assurances.html" class="footer__lien">Assurances</a></li>
           </ul>
         </div>
 
-        <!-- Colonne 4 : Contact -->
-        <div>
-          <p class="footer__titre">Contact</p>
-          <div class="footer__contact-item">📍 Cocody Anono, Abidjan — Îlot 120, Lot 3004, N°21</div>
-          <div class="footer__contact-item">📞 <a href="tel:+22501020201 79" class="footer__lien">+225 01 02 02 01 79</a></div>
-          <div class="footer__contact-item">💬 <a href="https://wa.me/2250767639063" target="_blank" rel="noopener" class="footer__lien">+225 07 67 63 90 63</a></div>
+        <!-- Colonne 3 : Contact + Réseaux -->
+        <div class="footer__col">
+          <p class="footer__titre">Nous Contacter</p>
+          <div class="footer__contact-item">📍 Cocody Anono, Ilot 120, Lot 3004, N°21 – BP 4024 Abidjan 21</div>
+          <div class="footer__contact-item">📞 <a href="tel:+2250102020179" class="footer__lien">+225 01 02 02 01 79</a></div>
+          <div class="footer__contact-item">💬 <a href="https://wa.me/2250767639063" target="_blank" rel="noopener noreferrer" class="footer__lien">+225 07 67 63 90 63</a></div>
           <div class="footer__contact-item">📧 <a href="mailto:contact@sofretmatransit.com" class="footer__lien">contact@sofretmatransit.com</a></div>
+          <div class="footer__contact-item">🌐 <a href="https://www.sofretmatransit.com" target="_blank" rel="noopener noreferrer" class="footer__lien">www.sofretmatransit.com</a></div>
           <div class="footer__contact-item">🕐 Lun–Ven 8h–18h / Sam 9h–13h</div>
+
+          <p class="footer__titre" style="margin-top:24px;">Suivez-nous</p>
+          <div class="footer__reseaux">
+            <a href="https://web.facebook.com/p/Sofretma-Transit-61567939505584/" target="_blank" rel="noopener noreferrer" class="footer__reseau" aria-label="Facebook SOFRETMA TRANSIT">f</a>
+            <a href="https://www.tiktok.com/@sofretma.transit6/" target="_blank" rel="noopener noreferrer" class="footer__reseau" aria-label="TikTok SOFRETMA TRANSIT">TK</a>
+            <a href="https://www.linkedin.com/company/sofretma-transit/" target="_blank" rel="noopener noreferrer" class="footer__reseau" aria-label="LinkedIn SOFRETMA TRANSIT">in</a>
+          </div>
         </div>
 
-      </div>
+      </div><!-- /footer__grille -->
 
-      <!-- Bas de footer -->
+      <!-- Barre de copyright -->
       <div class="footer__bas">
         <p>© 2025 SOFRETMA TRANSIT — SARL au capital de 1.000.000 F CFA — RCCM N°CI-ABJ-03-2025-B13-00904</p>
         <div class="footer__legaux">
@@ -417,18 +516,25 @@
     </div>
   </footer>
 
-  <!-- ========== WhatsApp flottant ========== -->
+  <!-- Bouton WhatsApp flottant -->
   <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20renseignement."
-     class="whatsapp-flottant" target="_blank" rel="noopener"
+     class="whatsapp-flottant" target="_blank" rel="noopener noreferrer"
      aria-label="Contacter SOFRETMA TRANSIT sur WhatsApp">
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
-  <script src="js/auto-scroll.js"></script>
-  <script src="js/chatbot.js"></script>
+  <!-- Scripts -->
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/auto-scroll.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
   <script>
-    W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });
+    // Initialisation auto-scroll après chargement des scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof W2KAutoScroll !== 'undefined') {
+        W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });
+      }
+    });
   </script>
 </body>
 </html>
