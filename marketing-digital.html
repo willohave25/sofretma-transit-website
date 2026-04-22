@@ -7,8 +7,8 @@
   <meta name="description" content="Conception de sites web professionnels et applications métiers pour entreprises à Abidjan. Stratégie digitale, SEO, e-commerce. Agence W2K-Digital, Côte d'Ivoire.">
   <meta property="og:title" content="Marketing Digital & Sites Web Abidjan | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/marketing-digital.html">
-  <link rel="canonical" href="https://sofretmatransit.com/marketing-digital.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/marketing-digital.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/marketing-digital.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 <body data-next-page="assurances.html">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -48,11 +48,10 @@
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-          <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -97,7 +96,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Conception de sites web professionnels</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Conception de sites web professionnels</h2>
           <p>La conception d'un site web professionnel commence par une analyse claire de vos objectifs : voulez-vous présenter votre activité, générer des contacts, vendre en ligne ou gérer des formulaires de demande ? Une fois les besoins identifiés, nous définissons une architecture de site, une charte graphique cohérente et une expérience utilisateur fluide.</p>
           <p>Un bon site web intègre des fonctionnalités adaptées au métier : formulaires de contact, devis en ligne, espace client, intégration WhatsApp, géolocalisation. Le site est conçu pour être rapide, sécurisé (HTTPS), optimisé pour le SEO et maintenable dans le temps.</p>
         </div>
@@ -128,7 +127,7 @@
           </picture>
         </div>
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Développement d'applications de métiers</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Développement d'applications de métiers</h2>
           <p>Au-delà du site vitrine ou e-commerce, de nombreuses entreprises ont besoin d'applications digitales spécifiques à leur métier : gestion clients, suivi de projets, logistique, dédouanement, expédition, réservation de voyages, facturation, gestion d'inventaire ou de personnel.</p>
           <p>Le développement d'une application de métier repose sur une analyse de process, puis sur la modélisation des flux, des formulaires, des droits d'accès et des rapports automatiques. L'objectif est de gagner du temps, réduire les erreurs, sécuriser les données et simplifier la collaboration entre équipes.</p>
         </div>
@@ -141,7 +140,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Stratégie de marketing digital et accompagnement</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Stratégie de marketing digital et accompagnement</h2>
           <p>Le marketing digital ne se limite pas à la création d'un site ou d'une application : il s'inscrit dans une stratégie globale comprenant le SEO, les campagnes publicitaires en ligne (SEA, réseaux sociaux, Google Ads), la gestion de la réputation et du contenu éditorial, ainsi que l'analyse de la performance.</p>
           <p>L'accompagnement inclut la définition de persona cibles, la recherche de mots-clés, la rédaction de contenus SEO, la configuration de formulaires de collecte, la mise en place de retargeting, et le suivi régulier des résultats.</p>
         </div>
@@ -279,9 +278,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
