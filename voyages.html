@@ -7,8 +7,8 @@
   <meta name="description" content="Billets d'avion, hôtels, voyages d'affaires et assistance visa depuis Abidjan. SOFRETMA TRANSIT, votre agence de voyages intégrée en Côte d'Ivoire.">
   <meta property="og:title" content="Agence de Voyages Abidjan | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/voyages.html">
-  <link rel="canonical" href="https://sofretmatransit.com/voyages.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/voyages.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/voyages.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 <body data-next-page="prestations.html">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -48,11 +48,10 @@
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-          <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -82,7 +81,7 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Agence de voyages – SOFRETMA TRANSIT</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Agence de voyages – SOFRETMA TRANSIT</h2>
           <p>SOFRETMA TRANSIT propose également un service d'agence de voyages intégré depuis Abidjan. Nous vous assistons sur les billets d'avion, les réservations d'hôtels, les voyages d'affaires et les démarches de visa, avec une attention particulière aux besoins professionnels et aux déplacements fréquents vers l'Europe, le Canada, l'Asie et l'Afrique.</p>
           <p>Nos partenariats avec des compagnies aériennes et des réseaux hôteliers nous permettent de vous proposer des tarifs négociés, des solutions sur mesure et un accompagnement de la réservation à l'arrivée finale.</p>
           <p>Vous bénéficiez d'un interlocuteur unique pour toutes vos questions de mobilité, ce qui simplifie la gestion de vos déplacements professionnels.</p>
@@ -219,9 +218,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
