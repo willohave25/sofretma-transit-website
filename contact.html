@@ -7,8 +7,8 @@
   <meta name="description" content="Contactez SOFRETMA TRANSIT à Abidjan : téléphone, WhatsApp, email. Cocody Anono, Abidjan. Devis gratuit pour vos opérations de transit et logistique internationale.">
   <meta property="og:title" content="Contact SOFRETMA TRANSIT Abidjan">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/contact.html">
-  <link rel="canonical" href="https://sofretmatransit.com/contact.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/contact.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/contact.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 <body data-next-page="index.html">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -48,11 +48,10 @@
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-            <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -85,13 +84,13 @@
 
         <!-- Colonne gauche : infos de contact -->
         <div>
-          <h2 style="color:var(--marron);margin-bottom:32px;">Nos coordonnées</h2>
+          <h2 style="color:var(--or);margin-bottom:32px;">Nos coordonnées</h2>
 
           <div style="display:flex;flex-direction:column;gap:24px;">
             <div style="display:flex;gap:16px;align-items:flex-start;">
               <div style="width:48px;height:48px;background:var(--vert-logo);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📍</div>
               <div>
-                <p style="font-weight:600;color:var(--marron);margin-bottom:4px;">Adresse</p>
+                <p style="font-weight:600;color:var(--or);margin-bottom:4px;">Adresse</p>
                 <p style="color:var(--gris-texte);">Cocody Anono, Abidjan<br>Côte d'Ivoire</p>
               </div>
             </div>
@@ -99,7 +98,7 @@
             <div style="display:flex;gap:16px;align-items:flex-start;">
               <div style="width:48px;height:48px;background:var(--vert-logo);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📞</div>
               <div>
-                <p style="font-weight:600;color:var(--marron);margin-bottom:4px;">Téléphone fixe</p>
+                <p style="font-weight:600;color:var(--or);margin-bottom:4px;">Téléphone fixe</p>
                 <a href="tel:+2250102020179" style="color:var(--vert-logo);font-weight:500;text-decoration:none;">+225 01 02 02 01 79</a>
               </div>
             </div>
@@ -107,7 +106,7 @@
             <div style="display:flex;gap:16px;align-items:flex-start;">
               <div style="width:48px;height:48px;background:#25D366;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💬</div>
               <div>
-                <p style="font-weight:600;color:var(--marron);margin-bottom:4px;">WhatsApp</p>
+                <p style="font-weight:600;color:var(--or);margin-bottom:4px;">WhatsApp</p>
                 <a href="https://wa.me/2250767639063" target="_blank" rel="noopener" style="color:var(--vert-logo);font-weight:500;text-decoration:none;">+225 07 67 63 90 63</a>
               </div>
             </div>
@@ -115,23 +114,23 @@
             <div style="display:flex;gap:16px;align-items:flex-start;">
               <div style="width:48px;height:48px;background:var(--vert-logo);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📧</div>
               <div>
-                <p style="font-weight:600;color:var(--marron);margin-bottom:4px;">Email</p>
+                <p style="font-weight:600;color:var(--or);margin-bottom:4px;">Email</p>
                 <a href="mailto:contact@sofretmatransit.com" style="color:var(--vert-logo);font-weight:500;text-decoration:none;">contact@sofretmatransit.com</a>
               </div>
             </div>
           </div>
 
           <!-- Horaires -->
-          <div style="margin-top:40px;background:var(--gris-clair);border-radius:16px;padding:24px;">
-            <h3 style="color:var(--marron);margin-bottom:16px;">Horaires d'ouverture</h3>
+          <div style="margin-top:40px;background:var(--bleu-profond);border-radius:16px;padding:24px;">
+            <h3 style="color:var(--or);margin-bottom:16px;">Horaires d'ouverture</h3>
             <table style="width:100%;border-collapse:collapse;">
               <tr style="border-bottom:1px solid #e5e7eb;">
                 <td style="padding:10px 0;color:var(--gris-texte);">Lundi – Vendredi</td>
-                <td style="padding:10px 0;font-weight:600;color:var(--marron);text-align:right;">08h00 – 18h00</td>
+                <td style="padding:10px 0;font-weight:600;color:var(--or);text-align:right;">08h00 – 18h00</td>
               </tr>
               <tr style="border-bottom:1px solid #e5e7eb;">
                 <td style="padding:10px 0;color:var(--gris-texte);">Samedi</td>
-                <td style="padding:10px 0;font-weight:600;color:var(--marron);text-align:right;">08h00 – 13h00</td>
+                <td style="padding:10px 0;font-weight:600;color:var(--or);text-align:right;">08h00 – 13h00</td>
               </tr>
               <tr>
                 <td style="padding:10px 0;color:var(--gris-texte);">Dimanche & Jours fériés</td>
@@ -143,7 +142,7 @@
 
           <!-- Réseaux sociaux -->
           <div style="margin-top:32px;">
-            <h3 style="color:var(--marron);margin-bottom:16px;">Nos réseaux sociaux</h3>
+            <h3 style="color:var(--or);margin-bottom:16px;">Nos réseaux sociaux</h3>
             <div style="display:flex;gap:12px;flex-wrap:wrap;">
               <a href="https://web.facebook.com/p/Sofretma-Transit-61567939505584/" target="_blank" rel="noopener"
                  style="display:flex;align-items:center;gap:8px;padding:10px 20px;background:#1877F2;color:#fff;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;">
@@ -163,33 +162,33 @@
 
         <!-- Colonne droite : formulaire -->
         <div>
-          <h2 style="color:var(--marron);margin-bottom:8px;">Envoyer un message</h2>
+          <h2 style="color:var(--or);margin-bottom:8px;">Envoyer un message</h2>
           <p style="color:var(--gris-texte);margin-bottom:32px;">Décrivez votre besoin et nous vous répondons sous 24h ouvrées.</p>
 
           <form id="form-contact" style="display:flex;flex-direction:column;gap:20px;">
             <div>
-              <label for="contact-nom" style="display:block;font-weight:500;color:var(--marron);margin-bottom:6px;">Nom complet *</label>
+              <label for="contact-nom" style="display:block;font-weight:500;color:var(--or);margin-bottom:6px;">Nom complet *</label>
               <input type="text" id="contact-nom" name="nom" required placeholder="Votre nom et prénom"
                      style="width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:8px;font-family:inherit;font-size:1rem;outline:none;transition:border-color .2s;"
                      onfocus="this.style.borderColor='var(--vert-logo)'" onblur="this.style.borderColor='#e5e7eb'">
             </div>
 
             <div>
-              <label for="contact-email" style="display:block;font-weight:500;color:var(--marron);margin-bottom:6px;">Email *</label>
+              <label for="contact-email" style="display:block;font-weight:500;color:var(--or);margin-bottom:6px;">Email *</label>
               <input type="email" id="contact-email" name="email" required placeholder="votre@email.com"
                      style="width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:8px;font-family:inherit;font-size:1rem;outline:none;transition:border-color .2s;"
                      onfocus="this.style.borderColor='var(--vert-logo)'" onblur="this.style.borderColor='#e5e7eb'">
             </div>
 
             <div>
-              <label for="contact-telephone" style="display:block;font-weight:500;color:var(--marron);margin-bottom:6px;">Téléphone / WhatsApp</label>
+              <label for="contact-telephone" style="display:block;font-weight:500;color:var(--or);margin-bottom:6px;">Téléphone / WhatsApp</label>
               <input type="tel" id="contact-telephone" name="telephone" placeholder="+225 XX XX XX XX XX"
                      style="width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:8px;font-family:inherit;font-size:1rem;outline:none;transition:border-color .2s;"
                      onfocus="this.style.borderColor='var(--vert-logo)'" onblur="this.style.borderColor='#e5e7eb'">
             </div>
 
             <div>
-              <label for="contact-objet" style="display:block;font-weight:500;color:var(--marron);margin-bottom:6px;">Objet *</label>
+              <label for="contact-objet" style="display:block;font-weight:500;color:var(--or);margin-bottom:6px;">Objet *</label>
               <select id="contact-objet" name="objet" required
                       style="width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:8px;font-family:inherit;font-size:1rem;outline:none;background:#fff;transition:border-color .2s;"
                       onfocus="this.style.borderColor='var(--vert-logo)'" onblur="this.style.borderColor='#e5e7eb'">
@@ -208,7 +207,7 @@
             </div>
 
             <div>
-              <label for="contact-message" style="display:block;font-weight:500;color:var(--marron);margin-bottom:6px;">Message *</label>
+              <label for="contact-message" style="display:block;font-weight:500;color:var(--or);margin-bottom:6px;">Message *</label>
               <textarea id="contact-message" name="message" required rows="5" placeholder="Décrivez votre demande en détail..."
                         style="width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:8px;font-family:inherit;font-size:1rem;outline:none;resize:vertical;transition:border-color .2s;"
                         onfocus="this.style.borderColor='var(--vert-logo)'" onblur="this.style.borderColor='#e5e7eb'"></textarea>
@@ -324,10 +323,11 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
   <script src="js/formulaires.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
