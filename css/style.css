@@ -1359,7 +1359,9 @@ select.formulaire__champ option { background: var(--bleu-profond); color: var(--
   }
 
   .nav__lien,
-  .nav__dropdown-btn { font-size: 1rem; padding: 12px 16px; width: 100%; text-align: left; }
+  .nav__dropdown-btn { font-size: 1rem; padding: 12px 16px; width: 100%; text-align: left; color: var(--texte-clair); }
+
+  .nav__lien:hover, .nav__dropdown-btn:hover, .nav__lien--actif { color: var(--or); background: rgba(212,175,55,0.15); }
 
   .dropdown {
     position: static;
