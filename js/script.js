@@ -5,44 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ---- Menu hamburger mobile ---- */
-  var hamburger = document.getElementById('hamburger');
-  var navMenu   = document.getElementById('navMenu');
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', function () {
-      var ouvert = navMenu.classList.toggle('ouvert');
-      hamburger.classList.toggle('actif', ouvert);
-      hamburger.setAttribute('aria-expanded', ouvert);
-    });
-
-    // Fermer menu au clic sur un lien
-    navMenu.querySelectorAll('.nav__lien, .dropdown__lien').forEach(function (lien) {
-      lien.addEventListener('click', function () {
-        navMenu.classList.remove('ouvert');
-        hamburger.classList.remove('actif');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  /* ---- Dropdown Services (bouton) ---- */
-  document.querySelectorAll('.nav__item--dropdown').forEach(function (item) {
-    var btn = item.querySelector('.nav__dropdown-btn');
-    if (!btn) return;
-
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var ouvert = item.classList.toggle('ouvert');
-      btn.setAttribute('aria-expanded', ouvert);
-    });
-
-    // Fermer en cliquant ailleurs
-    document.addEventListener('click', function () {
-      item.classList.remove('ouvert');
-      btn.setAttribute('aria-expanded', 'false');
-    });
-  });
 
   /* ---- Header : ombre au scroll ---- */
   var header = document.getElementById('header');
