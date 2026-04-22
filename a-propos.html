@@ -7,8 +7,8 @@
   <meta name="description" content="Découvrez SOFRETMA TRANSIT, commissionnaire agréé fondé en 2025 à Abidjan. Notre histoire, mission et valeurs au service de votre transit international.">
   <meta property="og:title" content="À Propos SOFRETMA TRANSIT Abidjan">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/a-propos.html">
-  <link rel="canonical" href="https://sofretmatransit.com/a-propos.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/a-propos.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/a-propos.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 </head>
 <body data-next-page="temoignages.html">
 
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -47,12 +47,11 @@
             </li>
             <li class="nav__item"><a href="a-propos.html" class="nav__lien nav__lien--actif">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
-            <li class="nav__item"><<li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-          <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>          
-          </ul
+            <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
+          </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -80,14 +79,14 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="fade-in">
         <div>
-          <h2 style="color:var(--marron);margin-bottom:16px;">Notre histoire</h2>
+          <h2 style="color:var(--or);margin-bottom:16px;">Notre histoire</h2>
           <p>SOFRETMA TRANSIT est une jeune société créée en 2025, enregistrée au RCCM sous le numéro CI-ABJ-03-2025-B13-00904 au Tribunal de commerce d'Abidjan. Nous couvrons plusieurs dizaines de destinations dans le monde, via des partenaires de fret maritime, aérien et terrestre.</p>
           <p>Depuis notre lancement, nous avons accompagné déjà une cinquantaine de clients de différentes tailles (PME, grandes entreprises et particuliers) dans leurs opérations de transit international, de fret maritime et de dédouanement à Abidjan.</p>
           <p>À chaque envoi, nous appliquons une traçabilité rigoureuse et une communication claire pour garantir la satisfaction de nos partenaires.</p>
 
           <!-- Infos légales encadrées -->
-          <div style="background:var(--gris-clair);border-radius:12px;padding:20px;margin-top:24px;border-left:4px solid var(--or);">
-            <p style="font-weight:700;color:var(--marron);margin-bottom:8px;">Informations légales</p>
+          <div style="background:var(--bleu-profond);border-radius:12px;padding:20px;margin-top:24px;border-left:4px solid var(--bleu-ciel);">
+            <p style="font-weight:700;color:var(--or);margin-bottom:8px;">Informations légales</p>
             <p style="font-size:.9rem;margin-bottom:4px;">• <strong>Forme :</strong> SARL au capital de 1.000.000 F CFA</p>
             <p style="font-size:.9rem;margin-bottom:4px;">• <strong>RCCM :</strong> N°CI-ABJ-03-2025-B13-00904</p>
             <p style="font-size:.9rem;margin-bottom:4px;">• <strong>Date :</strong> 29/01/2025 — Tribunal de Commerce d'Abidjan</p>
@@ -114,14 +113,14 @@
         <h2>Notre vision & mission</h2>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;" class="fade-in">
-        <div style="background:var(--blanc);border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.08);border-top:4px solid var(--vert-logo);">
+        <div style="background:var(--bleu-profond);border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.08);border-top:4px solid var(--vert-logo);">
           <div style="font-size:2rem;margin-bottom:16px;">🎯</div>
           <h3 style="color:var(--vert-logo);margin-bottom:12px;">Notre vision</h3>
           <p>Devenir le commissionnaire de référence en Afrique de l'Ouest, reconnu pour son expertise, sa fiabilité et son engagement envers ses clients. Être le pont entre Abidjan et le monde, avec professionnalisme et transparence.</p>
         </div>
-        <div style="background:var(--blanc);border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.08);border-top:4px solid var(--or);">
+        <div style="background:var(--bleu-profond);border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.08);border-top:4px solid var(--or);">
           <div style="font-size:2rem;margin-bottom:16px;">🚀</div>
-          <h3 style="color:var(--marron);margin-bottom:12px;">Notre mission</h3>
+          <h3 style="color:var(--or);margin-bottom:12px;">Notre mission</h3>
           <p>Simplifier les opérations de transit international, de fret et d'import-export depuis Abidjan, en offrant des solutions sur mesure adaptées à chaque besoin, que ce soit pour une multinationale, une PME ou un particulier.</p>
         </div>
       </div>
@@ -140,12 +139,12 @@
                  loading="lazy"
                  style="border-radius:50%;width:200px;height:200px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,.2);margin:0 auto 16px;">
           </picture>
-          <p style="font-weight:700;color:var(--marron);">M. TEKELE TEKELE IVAN ERIC</p>
-          <p style="font-size:.9rem;color:#666;">Directeur Général</p>
+          <p style="font-weight:700;color:var(--or);">M. TEKELE TEKELE IVAN ERIC</p>
+          <p style="font-size:.9rem;color:var(--texte-muted);">Directeur Général</p>
         </div>
         <div>
-          <h2 style="color:var(--marron);margin-bottom:24px;">Mot du dirigeant</h2>
-          <blockquote style="border-left:4px solid var(--or);padding-left:24px;font-style:italic;font-size:1.05rem;color:#444;line-height:1.8;">
+          <h2 style="color:var(--or);margin-bottom:24px;">Mot du dirigeant</h2>
+          <blockquote style="border-left:4px solid var(--bleu-ciel);padding-left:24px;font-style:italic;font-size:1.05rem;color:var(--texte-clair);line-height:1.8;">
             "Notre engagement est de vous offrir un service de transit international fiable, transparent et personnalisé depuis Abidjan. Nous croyons que chaque client mérite un accompagnement sur mesure et que la réussite de vos opérations logistiques est notre priorité absolue. En combinant expertise locale et réseau international, nous sommes votre partenaire de confiance pour tous vos besoins de fret et de transit."
           </blockquote>
           <p style="margin-top:16px;font-weight:600;color:var(--vert-logo);">— M. TEKELE TEKELE IVAN ERIC, Directeur Général de SOFRETMA TRANSIT</p>
@@ -188,8 +187,8 @@
   <!-- CTA -->
   <section class="section">
     <div class="container" style="text-align:center;">
-      <h2 style="color:var(--marron);margin-bottom:16px;" class="fade-in">Travaillons ensemble</h2>
-      <p style="color:#555;max-width:600px;margin:0 auto 32px;" class="fade-in">SOFRETMA TRANSIT est prêt à être votre partenaire logistique de confiance. Contactez-nous dès aujourd'hui.</p>
+      <h2 style="color:var(--or);margin-bottom:16px;" class="fade-in">Travaillons ensemble</h2>
+      <p style="color:var(--texte-muted);max-width:600px;margin:0 auto 32px;" class="fade-in">SOFRETMA TRANSIT est prêt à être votre partenaire logistique de confiance. Contactez-nous dès aujourd'hui.</p>
       <div class="fade-in" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <a href="formulaires.html" class="btn btn--or">Demander un devis</a>
         <a href="contact.html" class="btn btn--vert">Nous contacter</a>
@@ -256,9 +255,10 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });</script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
 </body>
 </html>
