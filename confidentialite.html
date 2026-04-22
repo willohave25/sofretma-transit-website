@@ -7,8 +7,8 @@
   <meta name="description" content="Politique de confidentialité SOFRETMA TRANSIT. Protection de vos données personnelles conformément à la loi ivoirienne n°2013-450 et à la réglementation ARTCI.">
   <meta property="og:title" content="Politique de Confidentialité | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
-  <meta property="og:url" content="https://sofretmatransit.com/confidentialite.html">
-  <link rel="canonical" href="https://sofretmatransit.com/confidentialite.html">
+  <meta property="og:url" content="https://www.sofretmatransit.com/confidentialite.html">
+  <link rel="canonical" href="https://www.sofretmatransit.com/confidentialite.html">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 <body data-next-page="cgv.html">
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
         <a href="index.html" class="header__logo">
@@ -28,11 +28,11 @@
             <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
           </picture>
         </a>
-        <nav class="header__nav" aria-label="Navigation principale">
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
           <ul class="nav__liste">
             <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__lien">Services</a>
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
               <ul class="dropdown">
                 <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
                 <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
@@ -47,11 +47,10 @@
             </li>
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-          <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
-        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -80,7 +79,7 @@
 
         <h2>3. Données collectées</h2>
         <p>SOFRETMA TRANSIT collecte les données personnelles suivantes lorsque vous utilisez notre site :</p>
-        <ul style="list-style:disc;padding-left:24px;color:#444;line-height:2;">
+        <ul style="list-style:disc;padding-left:24px;color:var(--texte-clair);line-height:2;">
           <li>Nom et prénom</li>
           <li>Adresse email</li>
           <li>Numéro de téléphone / WhatsApp</li>
@@ -90,7 +89,7 @@
 
         <h2>4. Finalités du traitement</h2>
         <p>Les données collectées sont utilisées exclusivement pour :</p>
-        <ul style="list-style:disc;padding-left:24px;color:#444;line-height:2;">
+        <ul style="list-style:disc;padding-left:24px;color:var(--texte-clair);line-height:2;">
           <li>Répondre à vos demandes de devis et questions commerciales</li>
           <li>Vous contacter pour le suivi de vos dossiers de transit</li>
           <li>Améliorer nos services et l'expérience utilisateur de notre site</li>
@@ -99,7 +98,7 @@
 
         <h2>5. Conservation des données</h2>
         <p>Vos données personnelles sont conservées pour la durée nécessaire aux finalités pour lesquelles elles ont été collectées, et au maximum :</p>
-        <ul style="list-style:disc;padding-left:24px;color:#444;line-height:2;">
+        <ul style="list-style:disc;padding-left:24px;color:var(--texte-clair);line-height:2;">
           <li>Données de contact et devis : 3 ans à compter du dernier contact</li>
           <li>Données contractuelles (dossiers clients) : 10 ans conformément aux obligations légales</li>
           <li>Données de navigation : 13 mois maximum</li>
@@ -107,14 +106,14 @@
 
         <h2>6. Partage des données</h2>
         <p>SOFRETMA TRANSIT ne vend, ne loue et ne cède aucune donnée personnelle à des tiers. Les données peuvent être partagées avec :</p>
-        <ul style="list-style:disc;padding-left:24px;color:#444;line-height:2;">
+        <ul style="list-style:disc;padding-left:24px;color:var(--texte-clair);line-height:2;">
           <li>Nos prestataires techniques (hébergement, emails) dans le strict cadre de l'exécution de leurs services</li>
           <li>Les autorités douanières et portuaires dans le cadre légal de nos prestations</li>
         </ul>
 
         <h2>7. Vos droits</h2>
         <p>Conformément à la loi n°2013-450, vous disposez des droits suivants sur vos données personnelles :</p>
-        <ul style="list-style:disc;padding-left:24px;color:#444;line-height:2;">
+        <ul style="list-style:disc;padding-left:24px;color:var(--texte-clair);line-height:2;">
           <li>Droit d'accès à vos données</li>
           <li>Droit de rectification</li>
           <li>Droit de suppression ("droit à l'oubli")</li>
@@ -192,7 +191,8 @@
     💬 WhatsApp
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
   <script src="js/chatbot.js"></script>
 </body>
 </html>
