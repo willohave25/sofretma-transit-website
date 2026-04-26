@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérification du compte | SOFRETMA TRANSIT</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <picture>
+            <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
+          </picture>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" style="min-height:70vh;display:flex;align-items:center;">
+    <div class="container">
+      <div style="max-width:480px;margin:0 auto;text-align:center;" class="fade-in">
+
+        <div id="zone-verification" style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:48px 36px;">
+          <div style="font-size:3rem;margin-bottom:16px;">⏳</div>
+          <h2 style="color:var(--or);margin-bottom:12px;">Activation en cours…</h2>
+          <p style="color:var(--texte-muted);">Vous allez être redirigé automatiquement.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const API = 'http://81.17.101.202/api';
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('token');
+      const zone = document.getElementById('zone-verification');
+
+      if (!token) {
+        zone.innerHTML = `
+          <div style="font-size:3rem;margin-bottom:16px;">❌</div>
+          <h2 style="color:#e53e3e;margin-bottom:12px;">Lien invalide</h2>
+          <p style="color:var(--texte-muted);margin-bottom:24px;">Ce lien de vérification est invalide ou manquant.</p>
+          <a href="inscription.html" class="btn btn--or">Créer un nouveau compte</a>`;
+        return;
+      }
+
+      // Redirige le navigateur vers l'API qui gère la vérification et redirige vers le site
+      window.location.href = `${API}/auth/verification/${encodeURIComponent(token)}`;
+    })();
+  </script>
+
+</body>
+</html>
