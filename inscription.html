@@ -128,15 +128,24 @@
             <!-- Mot de passe -->
             <div style="margin-bottom:20px;">
               <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Mot de passe <span style="color:#e53e3e;">*</span></label>
-              <input type="password" name="mot_de_passe" placeholder="Minimum 6 caractères" required minlength="6"
-                style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
-                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+              <div style="position:relative;">
+                <input id="mdp-inscription" type="password" name="mot_de_passe" placeholder="Min. 8 caractères, lettre + chiffre" required
+                  style="width:100%;padding:11px 44px 11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                  onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+                <button type="button" id="toggle-mdp-inscription" tabindex="-1"
+                  style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1.1rem;padding:2px;">👁</button>
+              </div>
+              <p style="color:var(--texte-muted);font-size:0.78rem;margin-top:5px;">Au moins 8 caractères, une lettre et un chiffre (ex : Bonjour25)</p>
             </div>
             <div style="margin-bottom:28px;">
               <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Confirmer le mot de passe <span style="color:#e53e3e;">*</span></label>
-              <input type="password" name="mot_de_passe_confirm" placeholder="Répétez votre mot de passe" required
-                style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
-                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+              <div style="position:relative;">
+                <input id="mdp-confirm-inscription" type="password" name="mot_de_passe_confirm" placeholder="Répétez votre mot de passe" required
+                  style="width:100%;padding:11px 44px 11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                  onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+                <button type="button" id="toggle-mdp-confirm-inscription" tabindex="-1"
+                  style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1.1rem;padding:2px;">👁</button>
+              </div>
             </div>
 
             <div data-message style="display:none;"></div>
