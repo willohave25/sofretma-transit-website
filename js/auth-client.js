@@ -5,7 +5,7 @@
 
 (function () {
 
-  const API = 'http://81.17.101.202/api';
+  const API = 'https://api.sofretmatransit.com/api';
   const CLE_TOKEN = 'sofretma_client_token';
   const CLE_USER  = 'sofretma_client_user';
 
