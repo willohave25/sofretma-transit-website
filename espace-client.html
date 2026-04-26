@@ -69,77 +69,75 @@
     </div>
   </section>
 
-  <!-- AUTH BOX -->
+  <!-- FORMULAIRES DE DEMANDE -->
   <section class="section">
     <div class="container">
 
-      <!-- Badge "Bientôt disponible" -->
-      <div style="text-align:center;margin-bottom:32px;" class="fade-in">
-        <span class="badge-bientot">⚙️ Mise en ligne prévue prochainement</span>
-        <p style="color:var(--texte-muted);margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;">
-          L'espace client est en cours de développement. En attendant, contactez-nous directement
-          par WhatsApp ou par email pour le suivi de vos dossiers.
-        </p>
+      <div style="text-align:center;margin-bottom:48px;" class="fade-in">
+        <h2 style="color:var(--or);margin-bottom:16px;">Déposez votre demande en ligne</h2>
+        <p style="color:var(--texte-muted);max-width:620px;margin:0 auto;">Sélectionnez votre service, remplissez le formulaire détaillé et recevez une référence dossier immédiate. Notre équipe vous contacte sous 24–48h.</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px;margin:0 auto;" class="fade-in">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto 56px;" class="fade-in">
 
-        <!-- Connexion -->
-        <div class="auth-box">
-          <h2 class="auth-box__titre">Se connecter</h2>
-          <form>
-            <div class="formulaire__groupe">
-              <label class="formulaire__label" for="login-email">Email</label>
-              <input type="email" id="login-email" class="formulaire__champ" placeholder="votre@email.com" disabled>
-            </div>
-            <div class="formulaire__groupe">
-              <label class="formulaire__label" for="login-mdp">Mot de passe</label>
-              <input type="password" id="login-mdp" class="formulaire__champ" placeholder="••••••••" disabled>
-            </div>
-            <button type="button" class="btn btn--vert" style="width:100%;justify-content:center;" disabled>
-              Connexion — Bientôt disponible
-            </button>
-            <p style="text-align:center;margin-top:12px;font-size:.85rem;color:#888;">
-              <a href="#inscription" style="color:var(--vert-logo);">Créer un compte</a>
-            </p>
-          </form>
-        </div>
+        <!-- Stockage -->
+        <a href="demande-stockage.html" style="display:block;text-decoration:none;">
+          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
+            <div style="font-size:2.2rem;margin-bottom:12px;">📦</div>
+            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Stockage &amp; Entreposage</h3>
+            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Entrepôt standard, sécurisé, sous douane ou parc à conteneurs.</p>
+            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
+          </div>
+        </a>
 
-        <!-- Inscription -->
-        <div class="auth-box" id="inscription">
-          <h2 class="auth-box__titre">Créer un compte</h2>
-          <form>
-            <div class="formulaire__groupe">
-              <label class="formulaire__label" for="reg-nom">Nom complet</label>
-              <input type="text" id="reg-nom" class="formulaire__champ" placeholder="Votre nom" disabled>
-            </div>
-            <div class="formulaire__groupe">
-              <label class="formulaire__label" for="reg-email">Email</label>
-              <input type="email" id="reg-email" class="formulaire__champ" placeholder="votre@email.com" disabled>
-            </div>
-            <div class="formulaire__groupe">
-              <label class="formulaire__label" for="reg-tel">Téléphone</label>
-              <input type="tel" id="reg-tel" class="formulaire__champ" placeholder="+225..." disabled>
-            </div>
-            <div class="formulaire__groupe">
-              <label class="formulaire__label" for="reg-mdp">Mot de passe</label>
-              <input type="password" id="reg-mdp" class="formulaire__champ" placeholder="••••••••" disabled>
-            </div>
-            <button type="button" class="btn btn--or" style="width:100%;justify-content:center;" disabled>
-              S'inscrire — Bientôt disponible
-            </button>
-          </form>
-        </div>
+        <!-- Sourcing -->
+        <a href="demande-sourcing.html" style="display:block;text-decoration:none;">
+          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
+            <div style="font-size:2.2rem;margin-bottom:12px;">🌍</div>
+            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Sourcing &amp; Achat International</h3>
+            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Recherche fournisseur, achat, inspection qualité, clé en main.</p>
+            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
+          </div>
+        </a>
+
+        <!-- Dédouanement -->
+        <a href="demande-dedouanement.html" style="display:block;text-decoration:none;">
+          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
+            <div style="font-size:2.2rem;margin-bottom:12px;">🧾</div>
+            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Dédouanement</h3>
+            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Import, export ou transit — déclaration et procédures douanières complètes.</p>
+            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
+          </div>
+        </a>
+
+        <!-- Maritime -->
+        <a href="demande-maritime.html" style="display:block;text-decoration:none;">
+          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
+            <div style="font-size:2.2rem;margin-bottom:12px;">🚢</div>
+            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Transport Maritime</h3>
+            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">FCL, LCL, RoRo — import et export par voie maritime internationale.</p>
+            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
+          </div>
+        </a>
+
+        <!-- Routier -->
+        <a href="demande-routier.html" style="display:block;text-decoration:none;">
+          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
+            <div style="font-size:2.2rem;margin-bottom:12px;">🚛</div>
+            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Transport Routier</h3>
+            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Livraisons en Afrique de l'Ouest — marchandises commerciales, conteneurs, véhicules.</p>
+            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
+          </div>
+        </a>
 
       </div>
 
-      <!-- Alternative contact -->
-      <div style="text-align:center;margin-top:48px;padding:32px;background:var(--bleu-profond);border-radius:16px;max-width:700px;margin-left:auto;margin-right:auto;" class="fade-in">
-        <h3 style="color:var(--or);margin-bottom:16px;">En attendant l'espace client, contactez-nous directement</h3>
-        <p style="color:var(--texte-muted);margin-bottom:24px;">Notre équipe vous répond rapidement pour le suivi de vos expéditions, vos questions et vos documents.</p>
+      <!-- Contact direct -->
+      <div style="text-align:center;padding:32px;background:var(--bleu-profond);border-radius:16px;max-width:700px;margin:0 auto;" class="fade-in">
+        <h3 style="color:var(--or);margin-bottom:12px;">Besoin d'aide ou suivi de dossier ?</h3>
+        <p style="color:var(--texte-muted);margin-bottom:24px;">Notre équipe répond rapidement pour tout suivi d'expédition ou question sur votre dossier en cours.</p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20suivi%20de%20mon%20dossier."
-             class="btn btn--or" target="_blank" rel="noopener">
+          <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20suivi%20de%20mon%20dossier." class="btn btn--or" target="_blank" rel="noopener">
             💬 WhatsApp — Suivi dossier
           </a>
           <a href="mailto:contact@sofretmatransit.com" class="btn btn--vert">
