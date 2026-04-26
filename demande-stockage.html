@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande de Stockage & Entreposage | SOFRETMA TRANSIT</title>
+  <meta name="description" content="Déposez votre demande de stockage et entreposage en ligne. SOFRETMA TRANSIT Abidjan.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <style>
+    .form-section { margin-bottom: 32px; }
+    .form-section__titre { font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--or-clair); text-transform: uppercase; letter-spacing: 1px; padding: 10px 0; border-bottom: 1px solid var(--glass-border); margin-bottom: 20px; }
+    .cb-groupe { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 8px; }
+    .cb-item { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.95rem; color: var(--texte-clair); }
+    .cb-item input { width: 16px; height: 16px; accent-color: var(--or); cursor: pointer; flex-shrink: 0; }
+    .radio-groupe { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 8px; }
+    .radio-item { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.95rem; color: var(--texte-clair); }
+    .radio-item input { accent-color: var(--or); cursor: pointer; }
+    .formulaire { max-width: 820px; margin: 0 auto; }
+    .message-erreur { display: none; }
+    [data-form-container] { max-width: 820px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <picture><img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56"></picture>
+        </a>
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
+          <ul class="nav__liste">
+            <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
+              <ul class="dropdown" role="menu">
+                <li><a href="maritime.html" class="dropdown__lien" role="menuitem">Transport Maritime</a></li>
+                <li><a href="aerien.html" class="dropdown__lien" role="menuitem">Transport Aérien</a></li>
+                <li><a href="ferroviaire.html" class="dropdown__lien" role="menuitem">Transport Ferroviaire</a></li>
+                <li><a href="terrestre.html" class="dropdown__lien" role="menuitem">Transport Terrestre</a></li>
+                <li><a href="entreposage.html" class="dropdown__lien" role="menuitem">Stockage &amp; Entreposage</a></li>
+                <li><a href="bureau-achats.html" class="dropdown__lien" role="menuitem">Bureau d'Achats</a></li>
+                <li><a href="voyages.html" class="dropdown__lien" role="menuitem">Agent de Voyages</a></li>
+                <li><a href="prestations.html" class="dropdown__lien" role="menuitem">Prestations de Services</a></li>
+                <li><a href="assurances.html" class="dropdown__lien" role="menuitem">Assurances</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
+            <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
+          </ul>
+        </nav>
+        <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero hero--interne" style="min-height:22vh;background:linear-gradient(135deg,#0B2557,#1D6FA4);">
+    <div class="container">
+      <div class="hero__contenu">
+        <nav class="breadcrumb"><a href="index.html">Accueil</a> › <a href="espace-client.html">Espace Client</a> › <span>Stockage &amp; Entreposage</span></nav>
+        <span class="hero__badge">📦 Demande officielle</span>
+        <h1 class="hero__titre">Demande de Stockage &amp; Entreposage</h1>
+        <p class="hero__texte">Remplissez ce formulaire pour soumettre votre dossier. Vous recevrez une référence et notre équipe vous contactera sous 24–48h.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div data-form-container>
+
+        <form class="formulaire" id="form-demande" novalidate>
+
+          <!-- 1. INFORMATIONS CLIENT -->
+          <div class="form-section">
+            <p class="form-section__titre">1. Informations client</p>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="nom">Raison sociale / Nom & Prénom *</label>
+                <input type="text" id="nom" name="nom" class="formulaire__champ" required placeholder="Ex : Koné Entreprises SARL">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="email">Email *</label>
+                <input type="email" id="email" name="email" class="formulaire__champ" required placeholder="contact@entreprise.com">
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="telephone">Téléphone / WhatsApp *</label>
+                <input type="tel" id="telephone" name="telephone" class="formulaire__champ" required placeholder="+225 XX XX XX XX XX">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="rccm">Numéro RCCM</label>
+                <input type="text" id="rccm" name="rccm" class="formulaire__champ" placeholder="CI-ABJ-…">
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="ville">Ville</label>
+                <input type="text" id="ville" name="ville" class="formulaire__champ" placeholder="Abidjan">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="pays">Pays</label>
+                <input type="text" id="pays" name="pays" class="formulaire__champ" placeholder="Côte d'Ivoire">
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. TYPE DE STOCKAGE -->
+          <div class="form-section">
+            <p class="form-section__titre">2. Type de stockage</p>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Sélectionnez le(s) type(s) souhaité(s) *</label>
+              <div class="cb-groupe" data-required-group>
+                <label class="cb-item"><input type="checkbox" name="type_stockage" value="Court terme (moins de 30 jours)"> Court terme (moins de 30 jours)</label>
+                <label class="cb-item"><input type="checkbox" name="type_stockage" value="Moyen terme (1 à 3 mois)"> Moyen terme (1 à 3 mois)</label>
+                <label class="cb-item"><input type="checkbox" name="type_stockage" value="Long terme (plus de 3 mois)"> Long terme (plus de 3 mois)</label>
+                <label class="cb-item"><input type="checkbox" name="type_stockage" value="Stockage e-commerce"> Stockage e-commerce</label>
+                <label class="cb-item"><input type="checkbox" name="type_stockage" value="Stockage sous douane"> Stockage sous douane (bonded warehouse)</label>
+                <label class="cb-item"><input type="checkbox" name="type_stockage" value="Parc à conteneurs"> Parc à conteneurs</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2BIS. PARC À CONTENEURS (conditionnel) -->
+          <div class="form-section" id="section-parc-conteneur" style="display:none;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:24px;">
+            <p class="form-section__titre">2 bis. Parc à conteneurs</p>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Type de service conteneur</label>
+              <div class="cb-groupe">
+                <label class="cb-item"><input type="checkbox" name="parc_service" value="Stockage conteneur vide"> Stockage vide</label>
+                <label class="cb-item"><input type="checkbox" name="parc_service" value="Stockage conteneur plein"> Stockage plein</label>
+                <label class="cb-item"><input type="checkbox" name="parc_service" value="Dépôt temporaire"> Dépôt temporaire</label>
+                <label class="cb-item"><input type="checkbox" name="parc_service" value="Retrait / livraison conteneur"> Retrait / livraison</label>
+                <label class="cb-item"><input type="checkbox" name="parc_service" value="Gestion de rotation conteneur"> Gestion de rotation</label>
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Type de conteneur</label>
+              <div class="cb-groupe">
+                <label class="cb-item"><input type="checkbox" name="parc_type_conteneur" value="20 pieds"> 20 pieds</label>
+                <label class="cb-item"><input type="checkbox" name="parc_type_conteneur" value="40 pieds"> 40 pieds</label>
+                <label class="cb-item"><input type="checkbox" name="parc_type_conteneur" value="40 HC"> 40 HC</label>
+                <label class="cb-item"><input type="checkbox" name="parc_type_conteneur" value="Reefer (réfrigéré)"> Reefer (réfrigéré)</label>
+                <label class="cb-item"><input type="checkbox" name="parc_type_conteneur" value="Open Top"> Open Top</label>
+                <label class="cb-item"><input type="checkbox" name="parc_type_conteneur" value="Flat Rack"> Flat Rack</label>
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="nb_conteneurs">Nombre de conteneurs</label>
+                <input type="number" id="nb_conteneurs" name="nb_conteneurs" class="formulaire__champ" min="1" placeholder="Ex : 2">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="conteneur_statut">Statut</label>
+                <select id="conteneur_statut" name="conteneur_statut" class="formulaire__champ">
+                  <option value="">Sélectionner…</option>
+                  <option value="Vide">Vide</option>
+                  <option value="Plein">Plein</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="numero_conteneurs">Numéro(s) de conteneur</label>
+              <input type="text" id="numero_conteneurs" name="numero_conteneurs" class="formulaire__champ" placeholder="Ex : MSCU1234567, TCKU7654321">
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="lieu_actuel">Lieu actuel</label>
+                <input type="text" id="lieu_actuel" name="lieu_actuel" class="formulaire__champ" placeholder="Ex : Port d'Abidjan">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="port_terminal">Port / Terminal</label>
+                <input type="text" id="port_terminal" name="port_terminal" class="formulaire__champ" placeholder="Ex : Terminal de Vridi">
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. DÉTAILS MARCHANDISES -->
+          <div class="form-section">
+            <p class="form-section__titre">3. Détails des marchandises</p>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="description_produits">Description des produits *</label>
+              <textarea id="description_produits" name="description_produits" class="formulaire__champ formulaire__champ--textarea" required placeholder="Décrivez vos marchandises, leur nature, conditionnement…"></textarea>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="nb_colis">Nombre de colis / palettes</label>
+                <input type="number" id="nb_colis" name="nb_colis" class="formulaire__champ" min="1" placeholder="Ex : 50">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="poids_kg">Poids total (kg)</label>
+                <input type="number" id="poids_kg" name="poids_kg" class="formulaire__champ" min="0" placeholder="Ex : 2500">
+              </div>
+            </div>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="volume_cbm">Volume (CBM)</label>
+                <input type="number" id="volume_cbm" name="volume_cbm" class="formulaire__champ" min="0" step="0.01" placeholder="Ex : 15.5">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="valeur_marchande">Valeur marchande (FCFA)</label>
+                <input type="text" id="valeur_marchande" name="valeur_marchande" class="formulaire__champ" placeholder="Ex : 5 000 000">
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Nature des marchandises</label>
+              <div class="cb-groupe">
+                <label class="cb-item"><input type="checkbox" name="nature_marchandise" value="Fragile"> Fragile</label>
+                <label class="cb-item"><input type="checkbox" name="nature_marchandise" value="Dangereuse"> Dangereuse</label>
+                <label class="cb-item"><input type="checkbox" name="nature_marchandise" value="Alimentaire"> Alimentaire</label>
+                <label class="cb-item"><input type="checkbox" name="nature_marchandise" value="Électronique"> Électronique</label>
+                <label class="cb-item"><input type="checkbox" name="nature_marchandise" value="Standard"> Standard</label>
+                <label class="cb-item"><input type="checkbox" name="nature_marchandise" value="Haute valeur"> Haute valeur</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. CONDITIONS DE STOCKAGE -->
+          <div class="form-section">
+            <p class="form-section__titre">4. Conditions de stockage</p>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="type_espace">Type d'espace souhaité</label>
+                <select id="type_espace" name="type_espace" class="formulaire__champ">
+                  <option value="">Sélectionner…</option>
+                  <option value="Entrepôt standard">Entrepôt standard</option>
+                  <option value="Entrepôt sécurisé">Entrepôt sécurisé</option>
+                  <option value="Chambre froide">Chambre froide (réfrigéré)</option>
+                  <option value="Zone haute sécurité">Zone haute sécurité</option>
+                </select>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="acces_marchandises">Accès aux marchandises</label>
+                <select id="acces_marchandises" name="acces_marchandises" class="formulaire__champ">
+                  <option value="">Sélectionner…</option>
+                  <option value="Accès libre client">Accès libre client</option>
+                  <option value="Accès sur demande">Accès sur demande</option>
+                  <option value="Interdit sans autorisation Sofretma">Interdit sans autorisation Sofretma</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. GESTION DE STOCK -->
+          <div class="form-section">
+            <p class="form-section__titre">5. Gestion de stock</p>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Services de gestion souhaités</label>
+              <div class="cb-groupe">
+                <label class="cb-item"><input type="checkbox" name="gestion_stock" value="Stockage simple"> Stockage simple</label>
+                <label class="cb-item"><input type="checkbox" name="gestion_stock" value="Gestion complète du stock"> Gestion complète</label>
+                <label class="cb-item"><input type="checkbox" name="gestion_stock" value="Suivi informatique entrées/sorties"> Suivi informatique</label>
+                <label class="cb-item"><input type="checkbox" name="gestion_stock" value="Préparation de commandes"> Préparation de commandes</label>
+                <label class="cb-item"><input type="checkbox" name="gestion_stock" value="Étiquetage"> Étiquetage</label>
+                <label class="cb-item"><input type="checkbox" name="gestion_stock" value="Inventaire régulier"> Inventaire régulier</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. LIVRAISON / SORTIE -->
+          <div class="form-section">
+            <p class="form-section__titre">6. Livraison / Sortie de stock</p>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="livraison_vers">Livraison finale vers</label>
+                <input type="text" id="livraison_vers" name="livraison_vers" class="formulaire__champ" placeholder="Ville / pays de destination">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mode_livraison">Mode de livraison</label>
+                <select id="mode_livraison" name="mode_livraison" class="formulaire__champ">
+                  <option value="">Sélectionner…</option>
+                  <option value="Routier">Routier</option>
+                  <option value="Aérien">Aérien</option>
+                  <option value="Livraison locale">Livraison locale</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. ASSURANCE -->
+          <div class="form-section">
+            <p class="form-section__titre">7. Assurance stock</p>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label">Souhaitez-vous assurer votre stock ?</label>
+              <div class="radio-groupe">
+                <label class="radio-item"><input type="radio" name="assurance" value="Oui"> Oui</label>
+                <label class="radio-item"><input type="radio" name="assurance" value="Non" checked> Non</label>
+              </div>
+            </div>
+            <div id="section-type-assurance" style="display:none;">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="type_assurance">Type d'assurance</label>
+                <select id="type_assurance" name="type_assurance" class="formulaire__champ">
+                  <option value="Standard">Assurance standard</option>
+                  <option value="Tous risques">Assurance tous risques</option>
+                </select>
+              </div>
+            </div>
+            <p style="color:var(--texte-muted);font-size:0.85rem;margin-top:8px;">Le coût de l'assurance sera communiqué après analyse du dossier.</p>
+          </div>
+
+          <!-- 8. DURÉE -->
+          <div class="form-section">
+            <p class="form-section__titre">8. Durée</p>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="date_entree">Date d'entrée souhaitée</label>
+                <input type="date" id="date_entree" name="date_entree" class="formulaire__champ">
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="date_sortie">Date de sortie prévue</label>
+                <input type="date" id="date_sortie" name="date_sortie" class="formulaire__champ">
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="duree_estimee">Durée estimée</label>
+              <input type="text" id="duree_estimee" name="duree_estimee" class="formulaire__champ" placeholder="Ex : 2 mois, 6 semaines…">
+            </div>
+          </div>
+
+          <!-- 9. SERVICES COMPLÉMENTAIRES -->
+          <div class="form-section">
+            <p class="form-section__titre">9. Services complémentaires</p>
+            <div class="formulaire__groupe">
+              <div class="cb-groupe">
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Manutention"> Manutention</label>
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Chargement / déchargement"> Chargement / déchargement</label>
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Palettisation"> Palettisation</label>
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Emballage"> Emballage</label>
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Étiquetage"> Étiquetage</label>
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Inventaire digital"> Inventaire digital</label>
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Sécurité renforcée"> Sécurité renforcée</label>
+                <label class="cb-item"><input type="checkbox" name="services_complementaires" value="Gestion parc à conteneurs"> Gestion parc conteneurs</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. INSTRUCTIONS -->
+          <div class="form-section">
+            <p class="form-section__titre">10. Instructions spéciales</p>
+            <div class="formulaire__groupe">
+              <textarea name="instructions_speciales" class="formulaire__champ formulaire__champ--textarea" placeholder="Contraintes particulières, produits sensibles, accès, urgences, remarques…"></textarea>
+            </div>
+          </div>
+
+          <!-- 11. CONDITIONS DE PAIEMENT -->
+          <div class="form-section">
+            <p class="form-section__titre">11. Conditions de paiement</p>
+            <div class="formulaire__ligne">
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="mode_paiement">Mode de paiement</label>
+                <select id="mode_paiement" name="mode_paiement" class="formulaire__champ">
+                  <option value="">Sélectionner…</option>
+                  <option value="Espèces">Espèces</option>
+                  <option value="Virement bancaire">Virement bancaire</option>
+                  <option value="Mobile Money">Mobile Money</option>
+                </select>
+              </div>
+              <div class="formulaire__groupe">
+                <label class="formulaire__label" for="modalites_paiement">Modalités</label>
+                <select id="modalites_paiement" name="modalites_paiement" class="formulaire__champ">
+                  <option value="">Sélectionner…</option>
+                  <option value="Mensuel">Mensuel</option>
+                  <option value="Avant stockage">Avant stockage</option>
+                  <option value="À la sortie">À la sortie</option>
+                </select>
+              </div>
+            </div>
+            <div class="formulaire__groupe">
+              <label class="formulaire__label" for="echeance_jours">Échéance (jours)</label>
+              <input type="number" id="echeance_jours" name="echeance_jours" class="formulaire__champ" min="0" placeholder="Ex : 30" style="max-width:200px;">
+            </div>
+          </div>
+
+          <!-- 12. VALIDATION -->
+          <div class="form-section">
+            <p class="form-section__titre">12. Validation</p>
+            <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px;">
+              <label class="cb-item"><input type="checkbox" name="validation_exactitude" value="oui" required> Je certifie que les informations fournies sont exactes</label>
+              <label class="cb-item"><input type="checkbox" name="validation_acceptation" value="oui"> J'accepte les conditions générales de SOFRETMA TRANSIT</label>
+              <label class="cb-item"><input type="checkbox" name="validation_autorisation" value="oui"> J'autorise SOFRETMA TRANSIT à manipuler et stocker mes marchandises / conteneurs</label>
+            </div>
+            <button type="button" class="btn btn--or" data-action="soumettre" style="width:100%;padding:16px;font-size:1.05rem;">
+              📦 Envoyer ma demande de stockage
+            </button>
+            <div class="message-erreur" data-zone-message></div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grille">
+        <div>
+          <picture><img src="images/logo-sofretma-blanc.png" alt="SOFRETMA TRANSIT" class="footer__logo"></picture>
+          <p class="footer__desc">Votre transitaire de référence basé à Abidjan.</p>
+        </div>
+        <div>
+          <p class="footer__titre">Navigation</p>
+          <ul class="footer__liens">
+            <li><a href="index.html" class="footer__lien">Accueil</a></li>
+            <li><a href="espace-client.html" class="footer__lien">Espace Client</a></li>
+            <li><a href="contact.html" class="footer__lien">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__titre">Contact</p>
+          <div class="footer__contact-item">📍 Cocody Anono, Abidjan</div>
+          <div class="footer__contact-item">📞 <a href="tel:+22501020201 79" class="footer__lien">+225 01 02 02 01 79</a></div>
+          <div class="footer__contact-item">💬 <a href="https://wa.me/2250767639063" target="_blank" rel="noopener" class="footer__lien">+225 07 67 63 90 63</a></div>
+          <div class="footer__contact-item">📧 <a href="mailto:contact@sofretmatransit.com" class="footer__lien">contact@sofretmatransit.com</a></div>
+        </div>
+      </div>
+      <div class="footer__bas">
+        <p>© 2025 SOFRETMA TRANSIT — SARL | RCCM N°CI-ABJ-03-2025-B13-00904</p>
+        <p>Conçu par <strong>W2K-Digital</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20renseignement." class="whatsapp-flottant" target="_blank" rel="noopener" aria-label="WhatsApp">💬 WhatsApp</a>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/demandes.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => DemandesInit.stockage());</script>
+</body>
+</html>
