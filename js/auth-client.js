@@ -67,17 +67,37 @@
   /* ============================================================
      FORMULAIRE INSCRIPTION (inscription.html)
   ============================================================ */
+  function toggleMdp(inputId, btnId) {
+    const input = document.getElementById(inputId);
+    const btn   = document.getElementById(btnId);
+    if (!input || !btn) return;
+    btn.addEventListener('click', () => {
+      const visible = input.type === 'text';
+      input.type = visible ? 'password' : 'text';
+      btn.textContent = visible ? '👁' : '🙈';
+    });
+  }
+
   function initInscription() {
     const form = document.getElementById('form-inscription');
     if (!form) return;
+
+    toggleMdp('mdp-inscription', 'toggle-mdp-inscription');
+    toggleMdp('mdp-confirm-inscription', 'toggle-mdp-confirm-inscription');
 
     form.addEventListener('submit', async e => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const msg = form.querySelector('[data-message]');
 
-      const mdp = form.querySelector('[name="mot_de_passe"]')?.value;
+      const mdp  = form.querySelector('[name="mot_de_passe"]')?.value;
       const mdp2 = form.querySelector('[name="mot_de_passe_confirm"]')?.value;
+
+      // Validation mot de passe : min 8 caractères, au moins 1 lettre et 1 chiffre
+      const regexMdp = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
+      if (!regexMdp.test(mdp)) {
+        return afficherMessage(msg, 'Le mot de passe doit contenir au moins 8 caractères, une lettre et un chiffre (ex: Bonjour25).', 'erreur');
+      }
       if (mdp !== mdp2) {
         return afficherMessage(msg, 'Les mots de passe ne correspondent pas.', 'erreur');
       }
@@ -123,6 +143,8 @@
   function initConnexion() {
     const form = document.getElementById('form-connexion');
     if (!form) return;
+
+    toggleMdp('login-mdp', 'toggle-mdp-connexion');
 
     // Si déjà connecté → mon-compte
     if (isLoggedIn()) {
