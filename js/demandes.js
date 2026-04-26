@@ -6,7 +6,7 @@
 
 (function () {
 
-  const API_BASE = 'http://81.17.101.202/api';
+  const API_BASE = 'https://api.sofretmatransit.com/api';
 
   // Vérification connexion (auth-client.js doit être chargé avant)
   if (typeof SofretmaClient !== 'undefined') {
