@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer un compte | SOFRETMA TRANSIT</title>
+  <meta name="description" content="Créez votre espace client SOFRETMA TRANSIT pour accéder à vos dossiers et soumettre vos demandes de transit en ligne.">
+  <link rel="canonical" href="https://www.sofretmatransit.com/inscription.html">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auto-scroll.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <picture>
+            <img src="images/logo-sofretma.png" alt="SOFRETMA TRANSIT" width="180" height="56">
+          </picture>
+        </a>
+        <nav class="header__nav" id="navMenu" aria-label="Navigation principale">
+          <ul class="nav__liste">
+            <li class="nav__item"><a href="index.html" class="nav__lien">Accueil</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <button class="nav__lien nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">Services <span class="nav__fleche" aria-hidden="true">&#9660;</span></button>
+              <ul class="dropdown">
+                <li><a href="maritime.html" class="dropdown__lien">Transport maritime</a></li>
+                <li><a href="aerien.html" class="dropdown__lien">Transport aérien</a></li>
+                <li><a href="ferroviaire.html" class="dropdown__lien">Transport ferroviaire</a></li>
+                <li><a href="terrestre.html" class="dropdown__lien">Transport terrestre</a></li>
+                <li><a href="entreposage.html" class="dropdown__lien">Stockage &amp; Entreposage</a></li>
+                <li><a href="bureau-achats.html" class="dropdown__lien">Bureau d'achats</a></li>
+                <li><a href="voyages.html" class="dropdown__lien">Agent de voyages</a></li>
+                <li><a href="prestations.html" class="dropdown__lien">Prestations de services</a></li>
+                <li><a href="marketing-digital.html" class="dropdown__lien">Marketing digital</a></li>
+                <li><a href="assurances.html" class="dropdown__lien">Assurances</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
+            <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
+            <li class="nav__item"><a href="espace-client.html" class="nav__lien nav__lien--actif">Espace Client</a></li>
+          </ul>
+        </nav>
+        <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero--interne" style="min-height:22vh;background:linear-gradient(135deg,var(--vert-fonce),var(--bleu));">
+    <div class="container">
+      <div class="hero__contenu">
+        <nav class="breadcrumb"><a href="index.html">Accueil</a> › <a href="espace-client.html">Espace Client</a> › <span>Inscription</span></nav>
+        <h1 class="hero__titre">Créer mon compte</h1>
+        <p class="hero__texte">Rejoignez l'espace client SOFRETMA TRANSIT pour gérer vos dossiers en ligne.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE INSCRIPTION -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width:580px;margin:0 auto;" class="fade-in">
+
+        <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:40px 36px;">
+          <div style="text-align:center;margin-bottom:32px;">
+            <div style="font-size:2.5rem;margin-bottom:12px;">👤</div>
+            <h2 style="color:var(--or);font-size:1.4rem;margin-bottom:8px;">Créer votre espace client</h2>
+            <p style="color:var(--texte-muted);font-size:0.9rem;">Remplissez le formulaire — vous recevrez un email de confirmation</p>
+          </div>
+
+          <form id="form-inscription" novalidate>
+
+            <!-- Identité -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+              <div>
+                <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Nom <span style="color:#e53e3e;">*</span></label>
+                <input type="text" name="nom" placeholder="Koné" required
+                  style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                  onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+              </div>
+              <div>
+                <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Prénom</label>
+                <input type="text" name="prenom" placeholder="Moussa"
+                  style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                  onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+              </div>
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Adresse email <span style="color:#e53e3e;">*</span></label>
+              <input type="email" name="email" placeholder="votre@email.com" required
+                style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Téléphone / WhatsApp</label>
+              <input type="tel" name="telephone" placeholder="+225 07 00 00 00 00"
+                style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+              <div>
+                <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Ville</label>
+                <input type="text" name="ville" placeholder="Abidjan"
+                  style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                  onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+              </div>
+              <div>
+                <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Pays</label>
+                <input type="text" name="pays" value="Côte d'Ivoire"
+                  style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                  onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+              </div>
+            </div>
+
+            <!-- Mot de passe -->
+            <div style="margin-bottom:20px;">
+              <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Mot de passe <span style="color:#e53e3e;">*</span></label>
+              <input type="password" name="mot_de_passe" placeholder="Minimum 6 caractères" required minlength="6"
+                style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+            </div>
+            <div style="margin-bottom:28px;">
+              <label style="display:block;color:var(--texte-clair);font-size:0.85rem;font-weight:500;margin-bottom:6px;">Confirmer le mot de passe <span style="color:#e53e3e;">*</span></label>
+              <input type="password" name="mot_de_passe_confirm" placeholder="Répétez votre mot de passe" required
+                style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.9rem;outline:none;box-sizing:border-box;"
+                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+            </div>
+
+            <div data-message style="display:none;"></div>
+
+            <button type="submit" class="btn btn--or" style="width:100%;justify-content:center;padding:14px;font-size:1rem;">
+              Créer mon compte
+            </button>
+          </form>
+
+          <div style="text-align:center;margin-top:24px;padding-top:24px;border-top:1px solid var(--glass-border);">
+            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:12px;">Vous avez déjà un compte ?</p>
+            <a href="espace-client.html" class="btn btn--vert" style="display:inline-block;">Se connecter</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grille">
+        <div>
+          <picture>
+            <img src="images/logo-sofretma-blanc.png" alt="SOFRETMA TRANSIT" class="footer__logo">
+          </picture>
+          <p class="footer__desc">Votre transitaire de référence basé à Abidjan.</p>
+          <div class="footer__reseaux">
+            <a href="https://web.facebook.com/p/Sofretma-Transit-61567939505584/" target="_blank" rel="noopener" class="footer__reseau">f</a>
+            <a href="https://www.tiktok.com/@sofretma.transit6/" target="_blank" rel="noopener" class="footer__reseau">TK</a>
+            <a href="https://www.linkedin.com/in/ivan-eric-tekele-934831230/" target="_blank" rel="noopener" class="footer__reseau">in</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__titre">Navigation</p>
+          <ul class="footer__liens">
+            <li><a href="index.html" class="footer__lien">Accueil</a></li>
+            <li><a href="a-propos.html" class="footer__lien">À Propos</a></li>
+            <li><a href="actualites.html" class="footer__lien">Actualités</a></li>
+            <li><a href="contact.html" class="footer__lien">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__titre">Nos services</p>
+          <ul class="footer__liens">
+            <li><a href="maritime.html" class="footer__lien">Transport maritime</a></li>
+            <li><a href="aerien.html" class="footer__lien">Transport aérien</a></li>
+            <li><a href="terrestre.html" class="footer__lien">Transport terrestre</a></li>
+            <li><a href="entreposage.html" class="footer__lien">Stockage &amp; Entreposage</a></li>
+            <li><a href="bureau-achats.html" class="footer__lien">Bureau d'achats</a></li>
+            <li><a href="assurances.html" class="footer__lien">Assurances</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__titre">Contact</p>
+          <div class="footer__contact-item">📍 Cocody Anono, Abidjan</div>
+          <div class="footer__contact-item">📞 <a href="tel:+2250102020179" class="footer__lien">+225 01 02 02 01 79</a></div>
+          <div class="footer__contact-item">💬 <a href="https://wa.me/2250767639063" target="_blank" rel="noopener" class="footer__lien">+225 07 67 63 90 63</a></div>
+          <div class="footer__contact-item">📧 <a href="mailto:contact@sofretmatransit.com" class="footer__lien">contact@sofretmatransit.com</a></div>
+        </div>
+      </div>
+      <div class="footer__bas">
+        <p>© 2025 SOFRETMA TRANSIT — SARL | RCCM N°CI-ABJ-03-2025-B13-00904</p>
+        <div class="footer__legaux">
+          <a href="mentions-legales.html" class="footer__lien">Mentions légales</a>
+          <a href="confidentialite.html" class="footer__lien">Confidentialité</a>
+          <a href="cgv.html" class="footer__lien">CGV</a>
+        </div>
+        <p>Conçu par <strong>W2K-Digital</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20renseignement."
+     class="whatsapp-flottant" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+    💬 WhatsApp
+  </a>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/auto-scroll.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/auth-client.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      SofretmaClient.initInscription();
+    });
+  </script>
+</body>
+</html>
