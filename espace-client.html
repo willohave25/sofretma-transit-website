@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espace Client | SOFRETMA TRANSIT Abidjan</title>
-  <meta name="description" content="Espace client sécurisé SOFRETMA TRANSIT. Connectez-vous ou créez votre compte pour accéder à vos dossiers de transit international depuis Abidjan.">
+  <title>Espace Client — Connexion | SOFRETMA TRANSIT</title>
+  <meta name="description" content="Connectez-vous à votre espace client SOFRETMA TRANSIT pour accéder à vos dossiers, suivre vos expéditions et soumettre vos demandes.">
   <meta property="og:title" content="Espace Client | SOFRETMA TRANSIT">
   <meta property="og:image" content="images/og-image-sofretma.jpg">
   <meta property="og:url" content="https://www.sofretmatransit.com/espace-client.html">
@@ -49,7 +49,7 @@
             <li class="nav__item"><a href="a-propos.html" class="nav__lien">À Propos</a></li>
             <li class="nav__item"><a href="temoignages.html" class="nav__lien">Témoignages</a></li>
             <li class="nav__item"><a href="contact.html" class="nav__lien">Contact</a></li>
-            <li class="nav__item"><a href="espace-client.html" class="nav__lien">Espace Client</a></li>
+            <li class="nav__item"><a href="espace-client.html" class="nav__lien nav__lien--actif">Espace Client</a></li>
           </ul>
         </nav>
         <div class="header__cta"><a href="formulaires.html" class="btn btn--or">Demande de devis</a></div>
@@ -59,93 +59,64 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero hero--interne" style="min-height:25vh;background:linear-gradient(135deg,var(--vert-fonce),var(--bleu));">
+  <section class="hero hero--interne" style="min-height:22vh;background:linear-gradient(135deg,var(--vert-fonce),var(--bleu));">
     <div class="container">
       <div class="hero__contenu">
         <nav class="breadcrumb"><a href="index.html">Accueil</a> › <span>Espace Client</span></nav>
         <h1 class="hero__titre">Espace Client</h1>
-        <p class="hero__texte">Accédez à vos dossiers de transit, suivez vos expéditions et gérez vos demandes en ligne.</p>
+        <p class="hero__texte">Connectez-vous pour accéder à vos dossiers et soumettre vos demandes.</p>
       </div>
     </div>
   </section>
 
-  <!-- FORMULAIRES DE DEMANDE -->
+  <!-- CONNEXION -->
   <section class="section">
     <div class="container">
+      <div style="max-width:460px;margin:0 auto;" class="fade-in">
 
-      <div style="text-align:center;margin-bottom:48px;" class="fade-in">
-        <h2 style="color:var(--or);margin-bottom:16px;">Déposez votre demande en ligne</h2>
-        <p style="color:var(--texte-muted);max-width:620px;margin:0 auto;">Sélectionnez votre service, remplissez le formulaire détaillé et recevez une référence dossier immédiate. Notre équipe vous contacte sous 24–48h.</p>
-      </div>
+        <!-- Zone infos (verified / erreur lien) -->
+        <div id="zone-info-auth" style="display:none;margin-bottom:16px;"></div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto 56px;" class="fade-in">
-
-        <!-- Stockage -->
-        <a href="demande-stockage.html" style="display:block;text-decoration:none;">
-          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
-            <div style="font-size:2.2rem;margin-bottom:12px;">📦</div>
-            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Stockage &amp; Entreposage</h3>
-            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Entrepôt standard, sécurisé, sous douane ou parc à conteneurs.</p>
-            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
+        <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:40px 36px;">
+          <div style="text-align:center;margin-bottom:32px;">
+            <div style="font-size:2.5rem;margin-bottom:12px;">🔐</div>
+            <h2 style="color:var(--or);font-size:1.5rem;margin-bottom:8px;">Connexion</h2>
+            <p style="color:var(--texte-muted);font-size:0.9rem;">Accédez à votre espace client personnel</p>
           </div>
-        </a>
 
-        <!-- Sourcing -->
-        <a href="demande-sourcing.html" style="display:block;text-decoration:none;">
-          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
-            <div style="font-size:2.2rem;margin-bottom:12px;">🌍</div>
-            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Sourcing &amp; Achat International</h3>
-            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Recherche fournisseur, achat, inspection qualité, clé en main.</p>
-            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
+          <form id="form-connexion" novalidate>
+            <div style="margin-bottom:20px;">
+              <label style="display:block;color:var(--texte-clair);font-size:0.9rem;font-weight:500;margin-bottom:8px;" for="login-email">Adresse email</label>
+              <input id="login-email" type="email" name="email" placeholder="votre@email.com" required
+                style="width:100%;padding:12px 16px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.95rem;outline:none;box-sizing:border-box;"
+                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+            </div>
+            <div style="margin-bottom:28px;">
+              <label style="display:block;color:var(--texte-clair);font-size:0.9rem;font-weight:500;margin-bottom:8px;" for="login-mdp">Mot de passe</label>
+              <input id="login-mdp" type="password" name="mot_de_passe" placeholder="••••••••" required
+                style="width:100%;padding:12px 16px;background:rgba(255,255,255,0.07);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--texte-clair);font-size:0.95rem;outline:none;box-sizing:border-box;"
+                onfocus="this.style.borderColor='var(--or)'" onblur="this.style.borderColor='var(--glass-border)'">
+            </div>
+
+            <div data-message style="display:none;"></div>
+
+            <button type="submit" class="btn btn--or" style="width:100%;justify-content:center;padding:14px;font-size:1rem;">
+              Se connecter
+            </button>
+          </form>
+
+          <div style="text-align:center;margin-top:24px;padding-top:24px;border-top:1px solid var(--glass-border);">
+            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:12px;">Pas encore de compte ?</p>
+            <a href="inscription.html" class="btn btn--vert" style="display:inline-block;">Créer mon compte</a>
           </div>
-        </a>
-
-        <!-- Dédouanement -->
-        <a href="demande-dedouanement.html" style="display:block;text-decoration:none;">
-          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
-            <div style="font-size:2.2rem;margin-bottom:12px;">🧾</div>
-            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Dédouanement</h3>
-            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Import, export ou transit — déclaration et procédures douanières complètes.</p>
-            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
-          </div>
-        </a>
-
-        <!-- Maritime -->
-        <a href="demande-maritime.html" style="display:block;text-decoration:none;">
-          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
-            <div style="font-size:2.2rem;margin-bottom:12px;">🚢</div>
-            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Transport Maritime</h3>
-            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">FCL, LCL, RoRo — import et export par voie maritime internationale.</p>
-            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
-          </div>
-        </a>
-
-        <!-- Routier -->
-        <a href="demande-routier.html" style="display:block;text-decoration:none;">
-          <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:28px 24px;transition:var(--transition);cursor:pointer;" onmouseover="this.style.borderColor='var(--or)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.transform='translateY(0)'">
-            <div style="font-size:2.2rem;margin-bottom:12px;">🚛</div>
-            <h3 style="color:var(--or);font-size:1.1rem;margin-bottom:8px;">Transport Routier</h3>
-            <p style="color:var(--texte-muted);font-size:0.9rem;margin-bottom:16px;">Livraisons en Afrique de l'Ouest — marchandises commerciales, conteneurs, véhicules.</p>
-            <span style="color:var(--emeraude);font-size:0.85rem;font-weight:600;">Déposer une demande →</span>
-          </div>
-        </a>
-
-      </div>
-
-      <!-- Contact direct -->
-      <div style="text-align:center;padding:32px;background:var(--bleu-profond);border-radius:16px;max-width:700px;margin:0 auto;" class="fade-in">
-        <h3 style="color:var(--or);margin-bottom:12px;">Besoin d'aide ou suivi de dossier ?</h3>
-        <p style="color:var(--texte-muted);margin-bottom:24px;">Notre équipe répond rapidement pour tout suivi d'expédition ou question sur votre dossier en cours.</p>
-        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="https://wa.me/2250767639063?text=Bonjour%20SOFRETMA%20TRANSIT%2C%20je%20souhaite%20un%20suivi%20de%20mon%20dossier." class="btn btn--or" target="_blank" rel="noopener">
-            💬 WhatsApp — Suivi dossier
-          </a>
-          <a href="mailto:contact@sofretmatransit.com" class="btn btn--vert">
-            📧 contact@sofretmatransit.com
-          </a>
         </div>
-      </div>
 
+        <!-- Aide -->
+        <div style="text-align:center;margin-top:24px;color:var(--texte-muted);font-size:0.85rem;">
+          <p>Un problème de connexion ? <a href="mailto:contact@sofretmatransit.com" style="color:var(--or);">Contactez-nous</a></p>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -187,7 +158,7 @@
         <div>
           <p class="footer__titre">Contact</p>
           <div class="footer__contact-item">📍 Cocody Anono, Abidjan</div>
-          <div class="footer__contact-item">📞 <a href="tel:+22501020201 79" class="footer__lien">+225 01 02 02 01 79</a></div>
+          <div class="footer__contact-item">📞 <a href="tel:+2250102020179" class="footer__lien">+225 01 02 02 01 79</a></div>
           <div class="footer__contact-item">💬 <a href="https://wa.me/2250767639063" target="_blank" rel="noopener" class="footer__lien">+225 07 67 63 90 63</a></div>
           <div class="footer__contact-item">📧 <a href="mailto:contact@sofretmatransit.com" class="footer__lien">contact@sofretmatransit.com</a></div>
         </div>
@@ -213,6 +184,14 @@
   <script src="js/main.js" defer></script>
   <script src="js/auto-scroll.js"></script>
   <script src="js/chatbot.js"></script>
-  <script>document.addEventListener("DOMContentLoaded",function(){if(typeof W2KAutoScroll!=="undefined"){W2KAutoScroll.init({speed:"lent",inactivityDelay:45,showIndicator:true});}});</script>
+  <script src="js/auth-client.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      SofretmaClient.initConnexion();
+      if (typeof W2KAutoScroll !== 'undefined') {
+        W2KAutoScroll.init({ speed: 'lent', inactivityDelay: 45, showIndicator: true });
+      }
+    });
+  </script>
 </body>
 </html>
